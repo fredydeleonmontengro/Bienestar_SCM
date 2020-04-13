@@ -85,6 +85,12 @@
     <Compile Include="Procesos\Frm_FacturaProveedores.Designer.cs">
       <DependentUpon>Frm_FacturaProveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Procesos\Frm_Ordencompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Frm_Ordencompra.Designer.cs">
+      <DependentUpon>Frm_Ordencompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Procesos\Frm_Polizas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Procesos\Frm_FacturaProveedores.resx">
       <DependentUpon>Frm_FacturaProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Frm_Ordencompra.resx">
+      <DependentUpon>Frm_Ordencompra.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
