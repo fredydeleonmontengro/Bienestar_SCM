@@ -1,0 +1,22 @@
+C:\Users\prueb\source\repos\SCM\Capa_Datos_SCM\bin\Debug\Capa_Datos_SCM.dll
+C:\Users\prueb\source\repos\SCM\Capa_Datos_SCM\bin\Debug\Capa_Datos_SCM.pdb
+C:\Users\prueb\source\repos\SCM\Capa_Datos_SCM\obj\Debug\Capa_Datos_SCM.csprojAssemblyReference.cache
+C:\Users\prueb\source\repos\SCM\Capa_Datos_SCM\obj\Debug\Capa_Datos_SCM.csproj.CoreCompileInputs.cache
+C:\Users\prueb\source\repos\SCM\Capa_Datos_SCM\obj\Debug\Capa_Datos_SCM.dll
+C:\Users\prueb\source\repos\SCM\Capa_Datos_SCM\obj\Debug\Capa_Datos_SCM.pdb
+C:\Users\prueb\Desktop\Modulo SCM\SCM\Capa_Datos_SCM\bin\Debug\Capa_Datos_SCM.dll
+C:\Users\prueb\Desktop\Modulo SCM\SCM\Capa_Datos_SCM\bin\Debug\Capa_Datos_SCM.pdb
+C:\Users\prueb\Desktop\Modulo SCM\SCM\Capa_Datos_SCM\obj\Debug\Capa_Datos_SCM.csprojAssemblyReference.cache
+C:\Users\prueb\Desktop\Modulo SCM\SCM\Capa_Datos_SCM\obj\Debug\Capa_Datos_SCM.csproj.CoreCompileInputs.cache
+C:\Users\prueb\Desktop\Modulo SCM\SCM\Capa_Datos_SCM\obj\Debug\Capa_Datos_SCM.dll
+C:\Users\prueb\Desktop\Modulo SCM\SCM\Capa_Datos_SCM\obj\Debug\Capa_Datos_SCM.pdb
+C:\Users\ivan5\Desktop\Modulo SCM\SCM\Capa_Datos_SCM\bin\Debug\Capa_Datos_SCM.dll
+C:\Users\ivan5\Desktop\Modulo SCM\SCM\Capa_Datos_SCM\bin\Debug\Capa_Datos_SCM.pdb
+C:\Users\ivan5\Desktop\Modulo SCM\SCM\Capa_Datos_SCM\obj\Debug\Capa_Datos_SCM.csprojAssemblyReference.cache
+C:\Users\ivan5\Desktop\Modulo SCM\SCM\Capa_Datos_SCM\obj\Debug\Capa_Datos_SCM.dll
+C:\Users\ivan5\Desktop\Modulo SCM\SCM\Capa_Datos_SCM\obj\Debug\Capa_Datos_SCM.pdb
+C:\Users\dell\Desktop\10pm\Bienestar_SCM-Ivan-Fredy\Modulo SCM\SCM\Capa_Datos_SCM\bin\Debug\Capa_Datos_SCM.dll
+C:\Users\dell\Desktop\10pm\Bienestar_SCM-Ivan-Fredy\Modulo SCM\SCM\Capa_Datos_SCM\bin\Debug\Capa_Datos_SCM.pdb
+C:\Users\dell\Desktop\10pm\Bienestar_SCM-Ivan-Fredy\Modulo SCM\SCM\Capa_Datos_SCM\obj\Debug\Capa_Datos_SCM.csprojAssemblyReference.cache
+C:\Users\dell\Desktop\10pm\Bienestar_SCM-Ivan-Fredy\Modulo SCM\SCM\Capa_Datos_SCM\obj\Debug\Capa_Datos_SCM.dll
+C:\Users\dell\Desktop\10pm\Bienestar_SCM-Ivan-Fredy\Modulo SCM\SCM\Capa_Datos_SCM\obj\Debug\Capa_Datos_SCM.pdb

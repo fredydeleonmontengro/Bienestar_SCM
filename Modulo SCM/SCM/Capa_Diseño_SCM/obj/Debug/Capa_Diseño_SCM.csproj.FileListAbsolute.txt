@@ -1,0 +1,63 @@
+C:\Users\prueb\source\repos\SCM\Capa_Diseño_SCM\bin\Debug\Capa_Diseño_SCM.dll
+C:\Users\prueb\source\repos\SCM\Capa_Diseño_SCM\bin\Debug\Capa_Diseño_SCM.pdb
+C:\Users\prueb\source\repos\SCM\Capa_Diseño_SCM\bin\Debug\Capa_Logica_SCM.dll
+C:\Users\prueb\source\repos\SCM\Capa_Diseño_SCM\bin\Debug\Capa_Logica_SCM.pdb
+C:\Users\prueb\source\repos\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.csprojAssemblyReference.cache
+C:\Users\prueb\source\repos\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.MDISCM.resources
+C:\Users\prueb\source\repos\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.csproj.GenerateResource.cache
+C:\Users\prueb\source\repos\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.csproj.CoreCompileInputs.cache
+C:\Users\prueb\source\repos\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.csproj.CopyComplete
+C:\Users\prueb\source\repos\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.dll
+C:\Users\prueb\source\repos\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.pdb
+C:\Users\prueb\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.csprojAssemblyReference.cache
+C:\Users\prueb\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\CapaDiseño.Mantenimientos.Frm_MantPercepciones.resources
+C:\Users\prueb\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.MDISCM.resources
+C:\Users\prueb\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.csproj.GenerateResource.cache
+C:\Users\prueb\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.csproj.CoreCompileInputs.cache
+C:\Users\prueb\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.dll
+C:\Users\prueb\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.pdb
+C:\Users\prueb\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\bin\Debug\Capa_Diseño_SCM.dll
+C:\Users\prueb\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\bin\Debug\Capa_Diseño_SCM.pdb
+C:\Users\prueb\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\bin\Debug\Capa_Logica_SCM.dll
+C:\Users\prueb\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\bin\Debug\Capa_Datos_SCM.dll
+C:\Users\prueb\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\bin\Debug\Capa_Logica_SCM.pdb
+C:\Users\prueb\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\bin\Debug\Capa_Datos_SCM.pdb
+C:\Users\prueb\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.csproj.CopyComplete
+C:\Users\prueb\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\CapaDiseño.Consulta.Frm_consultaConceptos.resources
+C:\Users\ivan5\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\bin\Debug\Capa_Diseño_SCM.dll
+C:\Users\ivan5\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\bin\Debug\Capa_Diseño_SCM.pdb
+C:\Users\ivan5\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\bin\Debug\Capa_Logica_SCM.dll
+C:\Users\ivan5\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\bin\Debug\Capa_Datos_SCM.dll
+C:\Users\ivan5\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\bin\Debug\Capa_Logica_SCM.pdb
+C:\Users\ivan5\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\bin\Debug\Capa_Datos_SCM.pdb
+C:\Users\ivan5\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.csprojAssemblyReference.cache
+C:\Users\ivan5\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\CapaDiseño.Consulta.Frm_consultaConceptos.resources
+C:\Users\ivan5\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.Consultas.Frm_consultaImpuesto.resources
+C:\Users\ivan5\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.Mantenimientos.Frm_MantImpuestos.resources
+C:\Users\ivan5\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\CapaDiseño.Mantenimientos.Frm_MantPercepciones.resources
+C:\Users\ivan5\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.MDISCM.resources
+C:\Users\ivan5\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.Frm_BusquedaOrdenCompra.resources
+C:\Users\ivan5\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.Frm_FacturaProveedores.resources
+C:\Users\ivan5\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.csproj.GenerateResource.cache
+C:\Users\ivan5\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.csproj.CopyComplete
+C:\Users\ivan5\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.dll
+C:\Users\ivan5\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.pdb
+C:\Users\dell\Desktop\10pm\Bienestar_SCM-Ivan-Fredy\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.csprojAssemblyReference.cache
+C:\Users\dell\Desktop\10pm\Bienestar_SCM-Ivan-Fredy\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.dll
+C:\Users\dell\Desktop\10pm\Bienestar_SCM-Ivan-Fredy\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.pdb
+C:\Users\dell\Desktop\10pm\Bienestar_SCM-Ivan-Fredy\Modulo SCM\SCM\Capa_Diseño_SCM\bin\Debug\Capa_Diseño_SCM.dll
+C:\Users\dell\Desktop\10pm\Bienestar_SCM-Ivan-Fredy\Modulo SCM\SCM\Capa_Diseño_SCM\bin\Debug\Capa_Diseño_SCM.pdb
+C:\Users\dell\Desktop\10pm\Bienestar_SCM-Ivan-Fredy\Modulo SCM\SCM\Capa_Diseño_SCM\bin\Debug\Capa_Logica_SCM.dll
+C:\Users\dell\Desktop\10pm\Bienestar_SCM-Ivan-Fredy\Modulo SCM\SCM\Capa_Diseño_SCM\bin\Debug\Capa_Datos_SCM.dll
+C:\Users\dell\Desktop\10pm\Bienestar_SCM-Ivan-Fredy\Modulo SCM\SCM\Capa_Diseño_SCM\bin\Debug\Capa_Logica_SCM.pdb
+C:\Users\dell\Desktop\10pm\Bienestar_SCM-Ivan-Fredy\Modulo SCM\SCM\Capa_Diseño_SCM\bin\Debug\Capa_Datos_SCM.pdb
+C:\Users\dell\Desktop\10pm\Bienestar_SCM-Ivan-Fredy\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\CapaDiseño.Consulta.Frm_consultaConceptos.resources
+C:\Users\dell\Desktop\10pm\Bienestar_SCM-Ivan-Fredy\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.Consultas.Frm_consultaImpuesto.resources
+C:\Users\dell\Desktop\10pm\Bienestar_SCM-Ivan-Fredy\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.Mantenimientos.Frm_MantImpuestos.resources
+C:\Users\dell\Desktop\10pm\Bienestar_SCM-Ivan-Fredy\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\CapaDiseño.Mantenimientos.Frm_MantPercepciones.resources
+C:\Users\dell\Desktop\10pm\Bienestar_SCM-Ivan-Fredy\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.MDISCM.resources
+C:\Users\dell\Desktop\10pm\Bienestar_SCM-Ivan-Fredy\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.Frm_BusquedaOrdenCompra.resources
+C:\Users\dell\Desktop\10pm\Bienestar_SCM-Ivan-Fredy\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.Frm_FacturaProveedores.resources
+C:\Users\dell\Desktop\10pm\Bienestar_SCM-Ivan-Fredy\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.Procesos.Frm_Ordencompra.resources
+C:\Users\dell\Desktop\10pm\Bienestar_SCM-Ivan-Fredy\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.csproj.GenerateResource.cache
+C:\Users\dell\Desktop\10pm\Bienestar_SCM-Ivan-Fredy\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.csproj.CopyComplete

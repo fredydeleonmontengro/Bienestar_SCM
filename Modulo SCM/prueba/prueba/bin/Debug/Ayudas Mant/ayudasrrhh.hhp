@@ -1,0 +1,43 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=ayudasrrhh.chm
+Contents file=ayuda-rrhh.hhc
+Default Window=ayudarrhh
+Default topic=asignacionempleado.html
+Display compile progress=No
+Language=0x100a Español (Guatemala)
+
+[WINDOWS]
+ayudarrhh="Ayuda recursos humanos","ayuda-rrhh.hhc",,"Convocatoria.html","Conceptos.html","Empleados.html","salto1","Despido.html","salto2",0x23520,,0xc387e,,,,,,,,0
+
+
+[FILES]
+asignacionempleado.html
+Conceptos.html
+ControlAsistencia.html
+ControlAsistenciaVista.html
+Convocatoria.html
+Curriculum.html
+Desempenio.html
+Despido.html
+Empleados.html
+Jornada.html
+MantenimientoDepartamentos.html
+MantenimientoPerfiles.html
+Medio Comunicacion.html
+Metas.html
+Nomina.html
+PreSeleccion.html
+ProcesoBusquedaInterna.html
+ProcesoSolicitudEmpleado.html
+Reunión.html
+ReuniónEliminar.html
+ReuniónModificar.html
+Sanción.html
+SanciónEliminar.html
+SanciónVista.html
+Tipo Contratacion.html
+Poliza _Nomina.html
+
+[INFOTYPES]
+
