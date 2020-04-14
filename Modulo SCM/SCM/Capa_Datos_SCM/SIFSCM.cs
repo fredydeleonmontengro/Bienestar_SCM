@@ -166,7 +166,7 @@ namespace Capa_Datos_SCM
             try
             {
                 cn.conexionbd();
-                string consulta = "SELECT Nombre, Costo  FROM mydb.producto  where pkidProveedor = '" + sIdProveedor + "';";
+                string consulta = "SELECT pkidProducto, Nombre, Costo  FROM mydb.producto  where pkidProveedor = '" + sIdProveedor + "';";
                 comm = new OdbcCommand(consulta, cn.conexionbd());
                 OdbcDataReader mostrar = comm.ExecuteReader();
                 return mostrar;
@@ -250,7 +250,23 @@ namespace Capa_Datos_SCM
             try
             {
                 cn.conexionbd();
-                string consulta = "insert into mydb.ordencompradetalle(fkIdordenCompraEncabezado, Producto, cantidad, subTotal, estado )  values(" + codigo + ", '" + producto + "' ,'" + cantidad + "','" + total + "','1');";
+                string consulta = "insert into mydb.ordencompradetalle(fkIdordenCompraEncabezado, fkIdProducto, cantidad, subTotal, estado )  values(" + codigo + ", '" + producto + "' ,'" + cantidad + "','" + total + "','1');";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        public OdbcDataReader ordencod()
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "SELECT MAX( pkIdOrdenCompraEncabezado +1) FROM mydb.ordencomrpaencabezado;";
                 comm = new OdbcCommand(consulta, cn.conexionbd());
                 OdbcDataReader mostrar = comm.ExecuteReader();
                 return mostrar;

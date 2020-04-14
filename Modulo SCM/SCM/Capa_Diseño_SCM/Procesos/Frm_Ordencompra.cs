@@ -18,6 +18,8 @@ namespace Capa_Diseño_SCM.Procesos
     {
         
         LIFSCM logic = new LIFSCM();
+        Logica logics = new Logica();
+        string codigoproduct;
         string producto;
         string costo;
         string totales;
@@ -26,10 +28,39 @@ namespace Capa_Diseño_SCM.Procesos
         public Frm_Ordencompra()
         {
             InitializeComponent();
-           
 
+            numeroorden();
 
         }
+
+        public void numeroorden()
+
+        {
+         
+            OdbcDataReader mostrar = logic.codorden();
+            try
+            {
+                while (mostrar.Read())
+                {
+                    Txt_orden.Text  = mostrar.GetString(0);
+
+
+                }
+
+
+
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+            }
+
+
+        
+
+
+
+    }
 
         public void Mostrarimpuestos()
         {
@@ -64,7 +95,7 @@ namespace Capa_Diseño_SCM.Procesos
                 while (mostrarEmpleado.Read())
                 {
 
-                    Dgv_productos.Rows.Add(mostrarEmpleado.GetString(0), mostrarEmpleado.GetString(1));
+                    Dgv_productos.Rows.Add(mostrarEmpleado.GetString(0), mostrarEmpleado.GetString(1), mostrarEmpleado.GetString(2));
 
                 }
 
@@ -148,7 +179,7 @@ namespace Capa_Diseño_SCM.Procesos
             else
             {
                 total();
-                Dgv_detalle.Rows.Add(producto , costo, Txt_cantidad.Text, totales);
+                Dgv_detalle.Rows.Add(codigoproduct,producto , costo, Txt_cantidad.Text, totales);
                 total();
                 
                 MessageBox.Show("agregado a la orden");
@@ -205,7 +236,7 @@ namespace Capa_Diseño_SCM.Procesos
             foreach (DataGridViewRow row in Dgv_detalle.Rows)
             {
                 string codorden = Convert.ToString(Txt_orden.Text);
-                string producto = Convert.ToString(row.Cells["Column1"].Value);
+                string producto = Convert.ToString(row.Cells["Codigo"].Value);
                 string cantidad = Convert.ToString(row.Cells["Column3"].Value);
                 string total = Convert.ToString(row.Cells["Column4"].Value);
 
@@ -287,11 +318,18 @@ namespace Capa_Diseño_SCM.Procesos
             }
             else
             {
+                codigoproduct = Dgv_productos.Rows[Dgv_productos.CurrentRow.Index].
+                  Cells[0].Value.ToString();
                 producto  = Dgv_productos.Rows[Dgv_productos.CurrentRow.Index].
-                    Cells[0].Value.ToString();
+                    Cells[1].Value.ToString();
                 costo  = Dgv_productos.Rows[Dgv_productos.CurrentRow.Index].
-                       Cells[1].Value.ToString();
+                       Cells[2].Value.ToString();
             }
+
+        }
+
+        private void Dgv_detalle_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

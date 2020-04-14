@@ -113,6 +113,13 @@ namespace Capa_Logica_SCM
         ;
 
         }
+        public OdbcDataReader codorden()
+
+        {
+            return sn.ordencod()
+        ;
+
+        }
 
 
 
