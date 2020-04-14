@@ -37,7 +37,8 @@
             this.Btn_seleccionar = new System.Windows.Forms.Button();
             this.Dgv_consultaOrdenCompra = new System.Windows.Forms.DataGridView();
             this.cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Lbl_codPercepcion = new System.Windows.Forms.Label();
@@ -137,7 +138,8 @@
             this.Dgv_consultaOrdenCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgv_consultaOrdenCompra.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cod,
-            this.fecha,
+            this.fechaP,
+            this.fechaE,
             this.codP,
             this.total});
             this.Dgv_consultaOrdenCompra.Location = new System.Drawing.Point(11, 173);
@@ -151,6 +153,8 @@
             this.Dgv_consultaOrdenCompra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Dgv_consultaOrdenCompra.Size = new System.Drawing.Size(947, 241);
             this.Dgv_consultaOrdenCompra.TabIndex = 72;
+            this.Dgv_consultaOrdenCompra.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_consultaOrdenCompra_CellClick);
+            this.Dgv_consultaOrdenCompra.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_consultaOrdenCompra_CellDoubleClick);
             // 
             // cod
             // 
@@ -158,11 +162,17 @@
             this.cod.Name = "cod";
             this.cod.ReadOnly = true;
             // 
-            // fecha
+            // fechaP
             // 
-            this.fecha.HeaderText = "Fecha";
-            this.fecha.Name = "fecha";
-            this.fecha.ReadOnly = true;
+            this.fechaP.HeaderText = "Fecha Pedido";
+            this.fechaP.Name = "fechaP";
+            this.fechaP.ReadOnly = true;
+            // 
+            // fechaE
+            // 
+            this.fechaE.HeaderText = "Fecha Entrega";
+            this.fechaE.Name = "fechaE";
+            this.fechaE.ReadOnly = true;
             // 
             // codP
             // 
@@ -195,6 +205,8 @@
             this.Txt_Cod.Name = "Txt_Cod";
             this.Txt_Cod.Size = new System.Drawing.Size(156, 24);
             this.Txt_Cod.TabIndex = 74;
+            this.Txt_Cod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Cod_KeyPress);
+            this.Txt_Cod.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Txt_Cod_KeyUp);
             // 
             // Frm_BusquedaOrdenCompra
             // 
@@ -231,7 +243,8 @@
         private System.Windows.Forms.Label Lbl_codPercepcion;
         private System.Windows.Forms.TextBox Txt_Cod;
         private System.Windows.Forms.DataGridViewTextBoxColumn cod;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaE;
         private System.Windows.Forms.DataGridViewTextBoxColumn codP;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
     }

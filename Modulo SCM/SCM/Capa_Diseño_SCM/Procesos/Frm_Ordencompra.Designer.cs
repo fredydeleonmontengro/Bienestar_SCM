@@ -35,6 +35,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_cerrar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_buscarI = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
             this.Txt_codigoempleado = new System.Windows.Forms.TextBox();
             this.Lbl_codigoempleado = new System.Windows.Forms.Label();
             this.Txt_fecha = new System.Windows.Forms.DateTimePicker();
@@ -44,9 +47,13 @@
             this.Txt_codProveedor = new System.Windows.Forms.TextBox();
             this.Lbl_codigoproveedor = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Txt_subtotal = new System.Windows.Forms.TextBox();
+            this.Txt_Totalorden = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.Txt_impuesto = new System.Windows.Forms.TextBox();
             this.Lbl_impuesto = new System.Windows.Forms.Label();
-            this.Txt_total = new System.Windows.Forms.TextBox();
             this.Lbl_total = new System.Windows.Forms.Label();
             this.Txt_descuento = new System.Windows.Forms.TextBox();
             this.Txt_formapago = new System.Windows.Forms.TextBox();
@@ -65,20 +72,11 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Btn_agregar = new System.Windows.Forms.Button();
-            this.Txt_Totalorden = new System.Windows.Forms.TextBox();
             this.Txt_cantidad = new System.Windows.Forms.TextBox();
-            this.Txt_costo = new System.Windows.Forms.TextBox();
-            this.Txt_producto = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.Lbl_cantidad = new System.Windows.Forms.Label();
-            this.Lbl_costo = new System.Windows.Forms.Label();
-            this.Lbl_producto = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Txt_subtotal = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.Pnl_nombreForm.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -98,7 +96,7 @@
             this.Pnl_nombreForm.Location = new System.Drawing.Point(6, 4);
             this.Pnl_nombreForm.Margin = new System.Windows.Forms.Padding(2);
             this.Pnl_nombreForm.Name = "Pnl_nombreForm";
-            this.Pnl_nombreForm.Size = new System.Drawing.Size(944, 62);
+            this.Pnl_nombreForm.Size = new System.Drawing.Size(1013, 62);
             this.Pnl_nombreForm.TabIndex = 72;
             // 
             // btn_Ayuda
@@ -106,7 +104,7 @@
             this.btn_Ayuda.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Ayuda.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_Ayuda.Image = ((System.Drawing.Image)(resources.GetObject("btn_Ayuda.Image")));
-            this.btn_Ayuda.Location = new System.Drawing.Point(867, 8);
+            this.btn_Ayuda.Location = new System.Drawing.Point(932, 7);
             this.btn_Ayuda.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Ayuda.Name = "btn_Ayuda";
             this.btn_Ayuda.Size = new System.Drawing.Size(33, 31);
@@ -118,7 +116,7 @@
             this.btn_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_minimizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_minimizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimizar.Image")));
-            this.btn_minimizar.Location = new System.Drawing.Point(830, 8);
+            this.btn_minimizar.Location = new System.Drawing.Point(895, 8);
             this.btn_minimizar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_minimizar.Name = "btn_minimizar";
             this.btn_minimizar.Size = new System.Drawing.Size(33, 31);
@@ -143,7 +141,7 @@
             this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_cerrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrar.Image")));
-            this.btn_cerrar.Location = new System.Drawing.Point(904, 8);
+            this.btn_cerrar.Location = new System.Drawing.Point(969, 8);
             this.btn_cerrar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(33, 31);
@@ -153,6 +151,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_buscarI);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.Txt_codigoempleado);
@@ -168,6 +167,38 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATOS DE ORDEN";
             this.groupBox1.UseWaitCursor = true;
+            // 
+            // btn_buscarI
+            // 
+            this.btn_buscarI.BackgroundImage = global::Capa_Diseño_SCM.Properties.Resources.icons8_espionaje_42;
+            this.btn_buscarI.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_buscarI.Location = new System.Drawing.Point(273, 99);
+            this.btn_buscarI.Name = "btn_buscarI";
+            this.btn_buscarI.Size = new System.Drawing.Size(28, 26);
+            this.btn_buscarI.TabIndex = 106;
+            this.btn_buscarI.UseVisualStyleBackColor = true;
+            this.btn_buscarI.UseWaitCursor = true;
+            this.btn_buscarI.Click += new System.EventHandler(this.btn_buscarI_Click);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(167, 77);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 42;
+            this.dateTimePicker1.UseWaitCursor = true;
+            this.dateTimePicker1.Value = new System.DateTime(2020, 4, 27, 0, 0, 0, 0);
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(23, 81);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(109, 13);
+            this.label4.TabIndex = 41;
+            this.label4.Text = "FECHA REQUERIDA";
+            this.label4.UseWaitCursor = true;
             // 
             // Txt_codigoempleado
             // 
@@ -243,6 +274,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.Txt_subtotal);
             this.groupBox2.Controls.Add(this.Txt_Totalorden);
             this.groupBox2.Controls.Add(this.label3);
@@ -261,6 +294,56 @@
             this.groupBox2.Text = "DETALLE DE PAGO";
             this.groupBox2.UseWaitCursor = true;
             // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::Capa_Diseño_SCM.Properties.Resources.icons8_espionaje_42;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(269, 32);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(28, 26);
+            this.button2.TabIndex = 108;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseWaitCursor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::Capa_Diseño_SCM.Properties.Resources.icons8_espionaje_42;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(269, 89);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(28, 26);
+            this.button1.TabIndex = 107;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseWaitCursor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Txt_subtotal
+            // 
+            this.Txt_subtotal.Location = new System.Drawing.Point(167, 10);
+            this.Txt_subtotal.Name = "Txt_subtotal";
+            this.Txt_subtotal.Size = new System.Drawing.Size(100, 20);
+            this.Txt_subtotal.TabIndex = 44;
+            this.Txt_subtotal.UseWaitCursor = true;
+            // 
+            // Txt_Totalorden
+            // 
+            this.Txt_Totalorden.Location = new System.Drawing.Point(167, 118);
+            this.Txt_Totalorden.Name = "Txt_Totalorden";
+            this.Txt_Totalorden.Size = new System.Drawing.Size(100, 20);
+            this.Txt_Totalorden.TabIndex = 93;
+            this.Txt_Totalorden.UseWaitCursor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(23, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(50, 13);
+            this.label3.TabIndex = 43;
+            this.label3.Text = "SubTotal";
+            this.label3.UseWaitCursor = true;
+            // 
             // Txt_impuesto
             // 
             this.Txt_impuesto.Location = new System.Drawing.Point(167, 92);
@@ -278,14 +361,6 @@
             this.Lbl_impuesto.TabIndex = 41;
             this.Lbl_impuesto.Text = "IMPUESTO";
             this.Lbl_impuesto.UseWaitCursor = true;
-            // 
-            // Txt_total
-            // 
-            this.Txt_total.Location = new System.Drawing.Point(332, 492);
-            this.Txt_total.Name = "Txt_total";
-            this.Txt_total.Size = new System.Drawing.Size(100, 20);
-            this.Txt_total.TabIndex = 40;
-            this.Txt_total.UseWaitCursor = true;
             // 
             // Lbl_total
             // 
@@ -337,7 +412,7 @@
             // 
             this.Gpb_Detallenominal.Controls.Add(this.Dgv_detalle);
             this.Gpb_Detallenominal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Gpb_Detallenominal.Location = new System.Drawing.Point(391, 252);
+            this.Gpb_Detallenominal.Location = new System.Drawing.Point(458, 252);
             this.Gpb_Detallenominal.Margin = new System.Windows.Forms.Padding(2);
             this.Gpb_Detallenominal.Name = "Gpb_Detallenominal";
             this.Gpb_Detallenominal.Padding = new System.Windows.Forms.Padding(2);
@@ -345,6 +420,7 @@
             this.Gpb_Detallenominal.TabIndex = 75;
             this.Gpb_Detallenominal.TabStop = false;
             this.Gpb_Detallenominal.Text = "DETALLE DE ORDEN";
+            this.Gpb_Detallenominal.Enter += new System.EventHandler(this.Gpb_Detallenominal_Enter);
             // 
             // Dgv_detalle
             // 
@@ -408,9 +484,9 @@
             // 
             // Btn_generar
             // 
-            this.Btn_generar.Location = new System.Drawing.Point(814, 179);
+            this.Btn_generar.Location = new System.Drawing.Point(788, 94);
             this.Btn_generar.Name = "Btn_generar";
-            this.Btn_generar.Size = new System.Drawing.Size(111, 24);
+            this.Btn_generar.Size = new System.Drawing.Size(143, 49);
             this.Btn_generar.TabIndex = 77;
             this.Btn_generar.Text = "Generar Orden";
             this.Btn_generar.UseVisualStyleBackColor = true;
@@ -424,7 +500,7 @@
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(342, 222);
+            this.groupBox3.Size = new System.Drawing.Size(326, 222);
             this.groupBox3.TabIndex = 78;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "PRODUCTOS";
@@ -445,7 +521,7 @@
             this.Dgv_productos.ReadOnly = true;
             this.Dgv_productos.RowHeadersWidth = 51;
             this.Dgv_productos.RowTemplate.Height = 24;
-            this.Dgv_productos.Size = new System.Drawing.Size(338, 202);
+            this.Dgv_productos.Size = new System.Drawing.Size(322, 202);
             this.Dgv_productos.TabIndex = 0;
             this.Dgv_productos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_productos_CellContentClick);
             // 
@@ -469,128 +545,39 @@
             // 
             // Btn_agregar
             // 
-            this.Btn_agregar.Location = new System.Drawing.Point(438, 488);
+            this.Btn_agregar.Location = new System.Drawing.Point(341, 339);
             this.Btn_agregar.Name = "Btn_agregar";
-            this.Btn_agregar.Size = new System.Drawing.Size(111, 24);
+            this.Btn_agregar.Size = new System.Drawing.Size(94, 24);
             this.Btn_agregar.TabIndex = 94;
             this.Btn_agregar.Text = "AGREGAR";
             this.Btn_agregar.UseVisualStyleBackColor = true;
+            this.Btn_agregar.Visible = false;
             this.Btn_agregar.Click += new System.EventHandler(this.Btn_agregar_Click);
-            // 
-            // Txt_Totalorden
-            // 
-            this.Txt_Totalorden.Location = new System.Drawing.Point(167, 118);
-            this.Txt_Totalorden.Name = "Txt_Totalorden";
-            this.Txt_Totalorden.Size = new System.Drawing.Size(100, 20);
-            this.Txt_Totalorden.TabIndex = 93;
-            this.Txt_Totalorden.UseWaitCursor = true;
             // 
             // Txt_cantidad
             // 
-            this.Txt_cantidad.Location = new System.Drawing.Point(222, 492);
+            this.Txt_cantidad.Location = new System.Drawing.Point(340, 313);
             this.Txt_cantidad.Name = "Txt_cantidad";
             this.Txt_cantidad.Size = new System.Drawing.Size(100, 20);
             this.Txt_cantidad.TabIndex = 92;
             this.Txt_cantidad.UseWaitCursor = true;
-            // 
-            // Txt_costo
-            // 
-            this.Txt_costo.Location = new System.Drawing.Point(113, 492);
-            this.Txt_costo.Name = "Txt_costo";
-            this.Txt_costo.Size = new System.Drawing.Size(100, 20);
-            this.Txt_costo.TabIndex = 91;
-            this.Txt_costo.UseWaitCursor = true;
-            // 
-            // Txt_producto
-            // 
-            this.Txt_producto.Location = new System.Drawing.Point(6, 492);
-            this.Txt_producto.Name = "Txt_producto";
-            this.Txt_producto.Size = new System.Drawing.Size(100, 20);
-            this.Txt_producto.TabIndex = 90;
-            this.Txt_producto.UseWaitCursor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(353, 476);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
-            this.label2.TabIndex = 89;
-            this.label2.Text = "TOTAL";
-            this.label2.UseWaitCursor = true;
+            this.Txt_cantidad.Visible = false;
             // 
             // Lbl_cantidad
             // 
             this.Lbl_cantidad.AutoSize = true;
-            this.Lbl_cantidad.Location = new System.Drawing.Point(219, 476);
+            this.Lbl_cantidad.Location = new System.Drawing.Point(334, 297);
             this.Lbl_cantidad.Name = "Lbl_cantidad";
             this.Lbl_cantidad.Size = new System.Drawing.Size(113, 13);
             this.Lbl_cantidad.TabIndex = 88;
             this.Lbl_cantidad.Text = "INGRESE CANTIDAD";
             this.Lbl_cantidad.UseWaitCursor = true;
-            // 
-            // Lbl_costo
-            // 
-            this.Lbl_costo.AutoSize = true;
-            this.Lbl_costo.Location = new System.Drawing.Point(110, 476);
-            this.Lbl_costo.Name = "Lbl_costo";
-            this.Lbl_costo.Size = new System.Drawing.Size(44, 13);
-            this.Lbl_costo.TabIndex = 87;
-            this.Lbl_costo.Text = "COSTO";
-            this.Lbl_costo.UseWaitCursor = true;
-            // 
-            // Lbl_producto
-            // 
-            this.Lbl_producto.AutoSize = true;
-            this.Lbl_producto.Location = new System.Drawing.Point(13, 476);
-            this.Lbl_producto.Name = "Lbl_producto";
-            this.Lbl_producto.Size = new System.Drawing.Size(68, 13);
-            this.Lbl_producto.TabIndex = 86;
-            this.Lbl_producto.Text = "PRODUCTO";
-            this.Lbl_producto.UseWaitCursor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 21);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 13);
-            this.label3.TabIndex = 43;
-            this.label3.Text = "SubTotal";
-            this.label3.UseWaitCursor = true;
-            // 
-            // Txt_subtotal
-            // 
-            this.Txt_subtotal.Location = new System.Drawing.Point(167, 10);
-            this.Txt_subtotal.Name = "Txt_subtotal";
-            this.Txt_subtotal.Size = new System.Drawing.Size(100, 20);
-            this.Txt_subtotal.TabIndex = 44;
-            this.Txt_subtotal.UseWaitCursor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 81);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 13);
-            this.label4.TabIndex = 41;
-            this.label4.Text = "FECHA REQUERIDA";
-            this.label4.UseWaitCursor = true;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(167, 77);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 42;
-            this.dateTimePicker1.UseWaitCursor = true;
-            this.dateTimePicker1.Value = new System.DateTime(2020, 4, 27, 0, 0, 0, 0);
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.Lbl_cantidad.Visible = false;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(756, 73);
+            this.label5.Location = new System.Drawing.Point(756, 169);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(98, 13);
             this.label5.TabIndex = 95;
@@ -599,28 +586,33 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(756, 89);
+            this.textBox1.Location = new System.Drawing.Point(754, 191);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(187, 20);
             this.textBox1.TabIndex = 94;
             this.textBox1.UseWaitCursor = true;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(341, 270);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(97, 24);
+            this.button3.TabIndex = 96;
+            this.button3.Text = "SELECCIONAR";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Frm_Ordencompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(954, 530);
+            this.ClientSize = new System.Drawing.Size(1021, 530);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Btn_agregar);
             this.Controls.Add(this.Txt_cantidad);
-            this.Controls.Add(this.Txt_costo);
-            this.Controls.Add(this.Txt_total);
-            this.Controls.Add(this.Txt_producto);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.Lbl_cantidad);
-            this.Controls.Add(this.Lbl_costo);
-            this.Controls.Add(this.Lbl_producto);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.Btn_generar);
             this.Controls.Add(this.Btn_buscar);
@@ -666,7 +658,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox Txt_impuesto;
         private System.Windows.Forms.Label Lbl_impuesto;
-        private System.Windows.Forms.TextBox Txt_total;
         private System.Windows.Forms.Label Lbl_total;
         private System.Windows.Forms.TextBox Txt_descuento;
         private System.Windows.Forms.TextBox Txt_formapago;
@@ -688,17 +679,16 @@
         private System.Windows.Forms.Button Btn_agregar;
         private System.Windows.Forms.TextBox Txt_Totalorden;
         private System.Windows.Forms.TextBox Txt_cantidad;
-        private System.Windows.Forms.TextBox Txt_costo;
-        private System.Windows.Forms.TextBox Txt_producto;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Lbl_cantidad;
-        private System.Windows.Forms.Label Lbl_costo;
-        private System.Windows.Forms.Label Lbl_producto;
         private System.Windows.Forms.TextBox Txt_subtotal;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btn_buscarI;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
     }
 }

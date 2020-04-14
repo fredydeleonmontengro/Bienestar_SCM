@@ -1,4 +1,5 @@
-﻿using Capa_Diseño_SCM.Mantenimientos;
+﻿using Capa_Diseño_SCM.Consultas;
+using Capa_Diseño_SCM.Mantenimientos;
 using Capa_Logica_SCM;
 using System;
 using System.Collections.Generic;
@@ -15,12 +16,17 @@ namespace Capa_Diseño_SCM.Procesos
 {
     public partial class Frm_Ordencompra : Form
     {
-        Logica logic = new Logica();
+        
+        LIFSCM logic = new LIFSCM();
+        string producto;
+        string costo;
+        string totales;
+        
 
         public Frm_Ordencompra()
         {
             InitializeComponent();
-            Mostrarimpuestos();
+           
 
 
         }
@@ -76,25 +82,17 @@ namespace Capa_Diseño_SCM.Procesos
         private void Btn_buscar_Click(object sender, EventArgs e)
         {
             Mostrarproductos();
-
+          
 
         }
 
         private void Dgv_productos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
-            {
-                Txt_producto.Text = Dgv_productos.CurrentRow.Cells[0].Value.ToString();
-                Txt_costo.Text = Dgv_productos.CurrentRow.Cells[1].Value.ToString();
-            }
-            catch
-            {
-
-            }
+           
         }
         public void total()
         {
-            Txt_total.Text = (Convert.ToInt32(Txt_cantidad.Text) * Convert.ToInt32(Txt_costo.Text)).ToString();
+           totales= (Convert.ToInt32(Txt_cantidad.Text) * Convert.ToInt32(costo)).ToString();
         }
 
         public void totalorden()
@@ -140,6 +138,9 @@ namespace Capa_Diseño_SCM.Procesos
         }
         private void Btn_agregar_Click(object sender, EventArgs e)
         {
+            Lbl_cantidad.Visible = false;
+            Txt_cantidad.Visible = false;
+            Btn_agregar.Visible = false;
             if (Txt_cantidad.Text == "")
             {
                 MessageBox.Show("ingrese cantidad");
@@ -147,14 +148,13 @@ namespace Capa_Diseño_SCM.Procesos
             else
             {
                 total();
-                Dgv_detalle.Rows.Add(Txt_producto.Text, Txt_costo.Text, Txt_cantidad.Text, Txt_total.Text);
+                Dgv_detalle.Rows.Add(producto , costo, Txt_cantidad.Text, totales);
                 total();
                 
                 MessageBox.Show("agregado a la orden");
-                Txt_producto.Clear();
-                Txt_costo.Clear();
+             
                 Txt_cantidad.Clear();
-                Txt_total.Clear();
+             
                 subtotal();
                 totalorden();
             }
@@ -199,10 +199,100 @@ namespace Capa_Diseño_SCM.Procesos
 
         }
 
+        public void Guardar2()
+
+        {
+            foreach (DataGridViewRow row in Dgv_detalle.Rows)
+            {
+                string codorden = Convert.ToString(Txt_orden.Text);
+                string producto = Convert.ToString(row.Cells["Column1"].Value);
+                string cantidad = Convert.ToString(row.Cells["Column3"].Value);
+                string total = Convert.ToString(row.Cells["Column4"].Value);
+
+                OdbcDataReader cita = logic.insertardetalle(codorden, producto, cantidad, total);
+
+
+
+            }
+          
+
+
+           
+
+
+
+        }
+
         private void Btn_generar_Click(object sender, EventArgs e)
         {
             Guardar();
+            Guardar2();
             MessageBox.Show("GENERADA");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Frm_consultaImpuesto concep = new Frm_consultaImpuesto();
+            concep.ShowDialog();
+
+            if (concep.DialogResult == DialogResult.OK)
+            {
+
+                Txt_impuesto.Text = concep.Dgv_consulta.Rows[concep.Dgv_consulta.CurrentRow.Index].
+                      Cells[3].Value.ToString();
+            }
+        }
+
+        private void btn_buscarI_Click(object sender, EventArgs e)
+        {
+            Frm_consultaEmpleados concep = new Frm_consultaEmpleados();
+            concep.ShowDialog();
+
+            if (concep.DialogResult == DialogResult.OK)
+            {
+               Txt_codigoempleado.Text = concep.Dgv_consulta.Rows[concep.Dgv_consulta.CurrentRow.Index].
+                      Cells[0].Value.ToString();
+              
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        { 
+        Frm_consultaFormaPago concep = new Frm_consultaFormaPago();
+        concep.ShowDialog();
+
+            if (concep.DialogResult == DialogResult.OK)
+            {
+
+                Txt_formapago.Text = concep.Dgv_consulta.Rows[concep.Dgv_consulta.CurrentRow.Index].
+                      Cells[0].Value.ToString();
+            }
+
+}
+
+        private void Gpb_Detallenominal_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Lbl_cantidad.Visible = true;
+            Txt_cantidad.Visible = true;
+            Btn_agregar.Visible = true;
+
+            if (Dgv_productos.Rows.Count == 0)
+            {
+                return;
+            }
+            else
+            {
+                producto  = Dgv_productos.Rows[Dgv_productos.CurrentRow.Index].
+                    Cells[0].Value.ToString();
+                costo  = Dgv_productos.Rows[Dgv_productos.CurrentRow.Index].
+                       Cells[1].Value.ToString();
+            }
+
         }
     }
 }

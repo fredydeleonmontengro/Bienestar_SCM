@@ -32,13 +32,14 @@
             this.Btn_actualizar = new System.Windows.Forms.Button();
             this.Btn_seleccionar = new System.Windows.Forms.Button();
             this.Dgv_consulta = new System.Windows.Forms.DataGridView();
-            this.cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.des = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pnl_nombreForm = new System.Windows.Forms.Panel();
             this.btn_minimizar = new System.Windows.Forms.Button();
             this.lbl_titulo = new System.Windows.Forms.Label();
             this.btn_cerrar = new System.Windows.Forms.Button();
+            this.cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.des = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_consulta)).BeginInit();
             this.Pnl_nombreForm.SuspendLayout();
             this.SuspendLayout();
@@ -88,7 +89,8 @@
             this.Dgv_consulta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cod,
             this.nom,
-            this.des});
+            this.des,
+            this.valor});
             this.Dgv_consulta.Location = new System.Drawing.Point(13, 81);
             this.Dgv_consulta.Margin = new System.Windows.Forms.Padding(2);
             this.Dgv_consulta.Name = "Dgv_consulta";
@@ -99,24 +101,6 @@
             this.Dgv_consulta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Dgv_consulta.Size = new System.Drawing.Size(666, 241);
             this.Dgv_consulta.TabIndex = 74;
-            // 
-            // cod
-            // 
-            this.cod.HeaderText = "COD";
-            this.cod.Name = "cod";
-            this.cod.ReadOnly = true;
-            // 
-            // nom
-            // 
-            this.nom.HeaderText = "Nombre";
-            this.nom.Name = "nom";
-            this.nom.ReadOnly = true;
-            // 
-            // des
-            // 
-            this.des.HeaderText = "Descripcion";
-            this.des.Name = "des";
-            this.des.ReadOnly = true;
             // 
             // Pnl_nombreForm
             // 
@@ -168,6 +152,30 @@
             this.btn_cerrar.UseVisualStyleBackColor = true;
             this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
+            // cod
+            // 
+            this.cod.HeaderText = "COD";
+            this.cod.Name = "cod";
+            this.cod.ReadOnly = true;
+            // 
+            // nom
+            // 
+            this.nom.HeaderText = "Nombre";
+            this.nom.Name = "nom";
+            this.nom.ReadOnly = true;
+            // 
+            // des
+            // 
+            this.des.HeaderText = "Descripcion";
+            this.des.Name = "des";
+            this.des.ReadOnly = true;
+            // 
+            // valor
+            // 
+            this.valor.HeaderText = "Valor";
+            this.valor.Name = "valor";
+            this.valor.ReadOnly = true;
+            // 
             // Frm_consultaImpuesto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -201,5 +209,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cod;
         private System.Windows.Forms.DataGridViewTextBoxColumn nom;
         private System.Windows.Forms.DataGridViewTextBoxColumn des;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valor;
     }
 }

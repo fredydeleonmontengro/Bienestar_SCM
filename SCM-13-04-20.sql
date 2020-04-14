@@ -18,6 +18,35 @@ USE `mydb`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `acreedor`
+--
+
+DROP TABLE IF EXISTS `acreedor`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `acreedor` (
+  `pkidacreedor` int NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(45) DEFAULT NULL,
+  `telefono` int DEFAULT NULL,
+  `nit` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `direccion` varchar(45) DEFAULT NULL,
+  `calidadservicio` varchar(45) DEFAULT NULL,
+  `estado` tinyint DEFAULT NULL,
+  PRIMARY KEY (`pkidacreedor`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `acreedor`
+--
+
+LOCK TABLES `acreedor` WRITE;
+/*!40000 ALTER TABLE `acreedor` DISABLE KEYS */;
+/*!40000 ALTER TABLE `acreedor` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `bodega`
 --
 
@@ -83,14 +112,11 @@ CREATE TABLE `facturaproveedordetalle` (
   `cantidad` double DEFAULT NULL,
   `precioUnitario` double DEFAULT NULL,
   `subTotal` double DEFAULT NULL,
-  `fkIdImpuesto` int DEFAULT NULL,
   `estado` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`pkidDetalleFactura`),
   KEY `fk_facturaProveedorDetalle_facturaProveedorEncabezado1_idx` (`fkidEncabezadoFactura`),
   KEY `fk_facturaProveedorDetalle_producto1_idx` (`fkidProducto`),
-  KEY `fk_facturaproveedordetalle_impuestos1_idx` (`fkIdImpuesto`),
   CONSTRAINT `fk_facturaProveedorDetalle_facturaProveedorEncabezado1` FOREIGN KEY (`fkidEncabezadoFactura`) REFERENCES `facturaproveedorencabezado` (`pkidEncabezadoFacturaP`),
-  CONSTRAINT `fk_facturaproveedordetalle_impuestos1` FOREIGN KEY (`fkIdImpuesto`) REFERENCES `impuestos` (`pkidImpuesto`),
   CONSTRAINT `fk_facturaProveedorDetalle_producto1` FOREIGN KEY (`fkidProducto`) REFERENCES `producto` (`pkidProducto`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -115,16 +141,20 @@ CREATE TABLE `facturaproveedorencabezado` (
   `pkidEncabezadoFacturaP` int NOT NULL AUTO_INCREMENT,
   `fkIdOrdenCompra` int DEFAULT NULL,
   `fkidEmpleado` int DEFAULT NULL,
+  `segun` varchar(45) DEFAULT NULL,
   `serieFactura` varchar(45) DEFAULT NULL,
   `numeroFactura` varchar(45) DEFAULT NULL,
   `fechaEntrega` date DEFAULT NULL,
+  `fkIdImpuesto` int DEFAULT NULL,
+  `totalImpuesto` double DEFAULT NULL,
   `total` double DEFAULT NULL,
   `estado` tinyint(1) DEFAULT NULL,
-  `totalImpuesto` double DEFAULT NULL,
   PRIMARY KEY (`pkidEncabezadoFacturaP`),
   KEY `fk_facturaProveedorEncabezado_empleado1_idx` (`fkidEmpleado`),
   KEY `fk_facturaproveedorencabezado_ordenComrpaEncabezado1_idx` (`fkIdOrdenCompra`),
+  KEY `fk_facturaproveedorencabezado_impuestos1_idx` (`fkIdImpuesto`),
   CONSTRAINT `fk_facturaProveedorEncabezado_empleado1` FOREIGN KEY (`fkidEmpleado`) REFERENCES `empleado` (`pkIdEmpleado`),
+  CONSTRAINT `fk_facturaproveedorencabezado_impuestos1` FOREIGN KEY (`fkIdImpuesto`) REFERENCES `impuestos` (`pkidImpuesto`),
   CONSTRAINT `fk_facturaproveedorencabezado_ordenComrpaEncabezado1` FOREIGN KEY (`fkIdOrdenCompra`) REFERENCES `ordencomrpaencabezado` (`pkIdOrdenCompraEncabezado`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -407,6 +437,56 @@ LOCK TABLES `proveedor` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `ruta`
+--
+
+DROP TABLE IF EXISTS `ruta`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `ruta` (
+  `pkidruta` int NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(45) DEFAULT NULL,
+  `descripcion` varchar(45) DEFAULT NULL,
+  `estado` tinyint DEFAULT NULL,
+  PRIMARY KEY (`pkidruta`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ruta`
+--
+
+LOCK TABLES `ruta` WRITE;
+/*!40000 ALTER TABLE `ruta` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ruta` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sucursal`
+--
+
+DROP TABLE IF EXISTS `sucursal`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `sucursal` (
+  `pkidsucursal` int NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(45) DEFAULT NULL,
+  `direccion` varchar(45) DEFAULT NULL,
+  `estado` tinyint DEFAULT NULL,
+  PRIMARY KEY (`pkidsucursal`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sucursal`
+--
+
+LOCK TABLES `sucursal` WRITE;
+/*!40000 ALTER TABLE `sucursal` DISABLE KEYS */;
+/*!40000 ALTER TABLE `sucursal` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `tipo producto`
 --
 
@@ -429,6 +509,32 @@ CREATE TABLE `tipo producto` (
 LOCK TABLES `tipo producto` WRITE;
 /*!40000 ALTER TABLE `tipo producto` DISABLE KEYS */;
 /*!40000 ALTER TABLE `tipo producto` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tipobodega`
+--
+
+DROP TABLE IF EXISTS `tipobodega`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tipobodega` (
+  `pkidtipobodega` int NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(45) DEFAULT NULL,
+  `descripcion` varchar(45) DEFAULT NULL,
+  `capacidad` varchar(45) DEFAULT NULL,
+  `estado` tinyint DEFAULT NULL,
+  PRIMARY KEY (`pkidtipobodega`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tipobodega`
+--
+
+LOCK TABLES `tipobodega` WRITE;
+/*!40000 ALTER TABLE `tipobodega` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tipobodega` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -457,6 +563,63 @@ LOCK TABLES `tipos_movimiento` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `tipotransporte`
+--
+
+DROP TABLE IF EXISTS `tipotransporte`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tipotransporte` (
+  `pkidtipotransporte` int NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(45) DEFAULT NULL,
+  `capacidad` float DEFAULT NULL,
+  `estado` tinyint DEFAULT NULL,
+  PRIMARY KEY (`pkidtipotransporte`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tipotransporte`
+--
+
+LOCK TABLES `tipotransporte` WRITE;
+/*!40000 ALTER TABLE `tipotransporte` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tipotransporte` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `transporte`
+--
+
+DROP TABLE IF EXISTS `transporte`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `transporte` (
+  `pkidtransporte` int NOT NULL AUTO_INCREMENT,
+  `fkidruta` int NOT NULL,
+  `fkidtipotransporte` int NOT NULL,
+  `placa` varchar(45) DEFAULT NULL,
+  `chasis` varchar(45) DEFAULT NULL,
+  `motor` varchar(45) DEFAULT NULL,
+  `estado` tinyint DEFAULT NULL,
+  PRIMARY KEY (`pkidtransporte`),
+  KEY `fk_transporte_ruta1_idx` (`fkidruta`),
+  KEY `fk_transporte_tipotransporte1_idx` (`fkidtipotransporte`),
+  CONSTRAINT `fk_transporte_ruta1` FOREIGN KEY (`fkidruta`) REFERENCES `ruta` (`pkidruta`),
+  CONSTRAINT `fk_transporte_tipotransporte1` FOREIGN KEY (`fkidtipotransporte`) REFERENCES `tipotransporte` (`pkidtipotransporte`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `transporte`
+--
+
+LOCK TABLES `transporte` WRITE;
+/*!40000 ALTER TABLE `transporte` DISABLE KEYS */;
+/*!40000 ALTER TABLE `transporte` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Dumping events for database 'mydb'
 --
 
@@ -473,4 +636,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-04-12 14:28:01
+-- Dump completed on 2020-04-13 18:01:56

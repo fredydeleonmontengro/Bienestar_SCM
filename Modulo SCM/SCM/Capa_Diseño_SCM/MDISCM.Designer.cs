@@ -51,7 +51,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.generarOrdenCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.generarOrdeDeCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -98,14 +98,14 @@
             // percepcionToolStripMenuItem
             // 
             this.percepcionToolStripMenuItem.Name = "percepcionToolStripMenuItem";
-            this.percepcionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.percepcionToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.percepcionToolStripMenuItem.Text = "Percepcion";
             this.percepcionToolStripMenuItem.Click += new System.EventHandler(this.PercepcionToolStripMenuItem_Click);
             // 
             // impuestosToolStripMenuItem
             // 
             this.impuestosToolStripMenuItem.Name = "impuestosToolStripMenuItem";
-            this.impuestosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.impuestosToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.impuestosToolStripMenuItem.Text = "Impuestos";
             this.impuestosToolStripMenuItem.Click += new System.EventHandler(this.impuestosToolStripMenuItem_Click);
             // 
@@ -113,7 +113,7 @@
             // 
             this.procesoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ingresoFacturaProveedoresToolStripMenuItem,
-            this.generarOrdenCompraToolStripMenuItem});
+            this.generarOrdeDeCompraToolStripMenuItem});
             this.procesoToolStripMenuItem.Name = "procesoToolStripMenuItem";
             this.procesoToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.procesoToolStripMenuItem.Text = "Proceso";
@@ -233,12 +233,12 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
             this.toolStripStatusLabel.Text = "Estado";
             // 
-            // generarOrdenCompraToolStripMenuItem
+            // generarOrdeDeCompraToolStripMenuItem
             // 
-            this.generarOrdenCompraToolStripMenuItem.Name = "generarOrdenCompraToolStripMenuItem";
-            this.generarOrdenCompraToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
-            this.generarOrdenCompraToolStripMenuItem.Text = "Generar orden compra";
-            this.generarOrdenCompraToolStripMenuItem.Click += new System.EventHandler(this.generarOrdenCompraToolStripMenuItem_Click);
+            this.generarOrdeDeCompraToolStripMenuItem.Name = "generarOrdeDeCompraToolStripMenuItem";
+            this.generarOrdeDeCompraToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.generarOrdeDeCompraToolStripMenuItem.Text = "Generar Orden de Compra";
+            this.generarOrdeDeCompraToolStripMenuItem.Click += new System.EventHandler(this.generarOrdeDeCompraToolStripMenuItem_Click);
             // 
             // MDISCM
             // 
@@ -288,7 +288,7 @@
         private System.Windows.Forms.ToolStripMenuItem percepcionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ingresoFacturaProveedoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem impuestosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem generarOrdenCompraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem generarOrdeDeCompraToolStripMenuItem;
     }
 }
 

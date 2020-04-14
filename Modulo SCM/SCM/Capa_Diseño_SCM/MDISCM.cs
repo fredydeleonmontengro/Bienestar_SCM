@@ -182,26 +182,28 @@ namespace Capa_Diseño_SCM
 
         bool ventanaordenDeCompra = false;
         Frm_Ordencompra orden = new Frm_Ordencompra();
-        private void generarOrdenCompraToolStripMenuItem_Click(object sender, EventArgs e)
+        private void generarOrdeDeCompraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_Ordencompra);
-            if (ventanaordenDeCompra == false || frmC == null)
             {
-                if (frmC == null)
+                Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_Ordencompra);
+                if (ventanaordenDeCompra == false || frmC == null)
                 {
-                    orden = new Frm_Ordencompra();
+                    if (frmC == null)
+                    {
+                        orden = new Frm_Ordencompra();
+                    }
+
+                    orden.MdiParent = this;
+                    orden.Show();
+                    Application.DoEvents();
+                    ventanaordenDeCompra = true;
+                }
+                else
+                {
+                    orden.WindowState = System.Windows.Forms.FormWindowState.Normal;
                 }
 
-                orden.MdiParent = this;
-                orden.Show();
-                Application.DoEvents();
-                ventanaordenDeCompra = true;
             }
-            else
-            {
-                orden.WindowState = System.Windows.Forms.FormWindowState.Normal;
-            }
-
         }
     }
 }

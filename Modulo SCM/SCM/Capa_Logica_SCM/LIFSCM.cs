@@ -28,26 +28,34 @@ namespace Capa_Logica_SCM
         }
 
         SIFSCM sn = new SIFSCM();
-        //------------------------------------------------------------------------------------------------------CONSULTA IMPUESTO-------------------------------------------------------//
+        //------------------------------------------------------------------------------------------------------CONSULTA IMPUESTO y EMPLEADO-------------------------------------------------------//
 
         public OdbcDataReader consultaImpuesto()
         {
             return sn.consultaImpuesto();
         }
+        public OdbcDataReader consultaempleado()
+        {
+            return sn.consultaempleados();
+        }
+        public OdbcDataReader formasdepago()
+        {
+            return sn.formaspago ();
+        }
 
 
         //------------------------------------------------------------------------------------------------------INSERTS IMPUESTO-------------------------------------------------------//
-        public OdbcDataReader InsertarImpuesto(string sCodigo, string sNombre, string sTipoconcepto)
+        public OdbcDataReader InsertarImpuesto(string sCodigo, string sNombre, string sTipoconcepto, string sValor)
         {
-            return sn.InsertarImpuesto(sCodigo, sNombre, sTipoconcepto);
+            return sn.InsertarImpuesto(sCodigo, sNombre, sTipoconcepto, sValor);
 
         }
         //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
 
         //------------------------------------------------------------------------------------------------------UPDATE IMPUESTO-------------------------------------------------------//
-        public OdbcDataReader modificarImpuesto(string sCodigo, string sNombre, string sTipoconcepto)
+        public OdbcDataReader modificarImpuesto(string sCodigo, string sNombre, string sTipoconcepto, string sValor)
         {
-            return sn.modificarImpuesto(sCodigo, sNombre, sTipoconcepto);
+            return sn.modificarImpuesto(sCodigo, sNombre, sTipoconcepto, sValor);
 
         }
         //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
@@ -57,5 +65,56 @@ namespace Capa_Logica_SCM
             return sn.eliminarImpuesto(sCodigo);
 
         }
+        //------------------------------------------------------------------------------------------------------CONSULTA ENCABEZADO ORDEN DE COMPRA------------------------------------------------------//
+
+        public OdbcDataReader consultaOrdenCompraEncabezado()
+        {
+            return sn.consultaOrdenCompraEncabezado();
+        }
+
+        //------------------------------------------------------------------------------------------------------CONSULTA PROVEEDOR-ORDEN DE COMPRA-----------------------------------------------------//
+
+        public OdbcDataReader consultaProveedorOrden(string sCod)
+        {
+            return sn.consultaProveedorOrden(sCod);
+        }
+
+        //------------------------------------------------------------------------------------------------------CONSULTA DETALLE ORDEN DE COMPRA-----------------------------------------------------//
+
+        public OdbcDataReader consultaDetalleOrden(string sCod)
+        {
+            return sn.consultaDetalleOrden(sCod);
+        }
+
+
+        public OdbcDataReader productosmostrar(string sIdProveedor)
+        {
+            return sn.mostrarproductos(sIdProveedor);
+
+        }
+        public OdbcDataReader impuestos()
+        {
+            return sn.sumaimpustos();
+
+        }
+
+        public OdbcDataReader insertarencabezado(string pkencabezado, string codproveedor, string formapago, string fechapedido, string fecharequerida, string codempleado, string observaciones, string impuesto, string total, string descuento)
+
+        {
+            return sn.InsertarEncabezadoOrdenCompra(pkencabezado, codproveedor, formapago, fechapedido, fecharequerida, codempleado, observaciones, impuesto, total, descuento)
+        ;
+
+        }
+
+        public OdbcDataReader insertardetalle(string codigo, string producto, string cantidad, string total)
+
+        {
+            return sn.InsertardetallerdenCompra(codigo,producto,cantidad,total)
+        ;
+
+        }
+
+
+
     }
 }

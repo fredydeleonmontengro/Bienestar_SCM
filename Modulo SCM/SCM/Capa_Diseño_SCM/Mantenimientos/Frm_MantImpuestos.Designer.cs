@@ -46,6 +46,8 @@
             this.Btn_guardar = new System.Windows.Forms.Button();
             this.Btn_editar = new System.Windows.Forms.Button();
             this.Btn_ingresar = new System.Windows.Forms.Button();
+            this.txt_valor = new System.Windows.Forms.TextBox();
+            this.lbl_valor = new System.Windows.Forms.Label();
             this.Pnl_nombreForm.SuspendLayout();
             this.gpb_datos.SuspendLayout();
             this.SuspendLayout();
@@ -116,6 +118,8 @@
             // 
             // gpb_datos
             // 
+            this.gpb_datos.Controls.Add(this.txt_valor);
+            this.gpb_datos.Controls.Add(this.lbl_valor);
             this.gpb_datos.Controls.Add(this.txt_descripcion);
             this.gpb_datos.Controls.Add(this.lbl_descripcion);
             this.gpb_datos.Controls.Add(this.Txt_nombre);
@@ -293,6 +297,24 @@
             this.Btn_ingresar.UseVisualStyleBackColor = false;
             this.Btn_ingresar.Click += new System.EventHandler(this.Btn_ingresar_Click);
             // 
+            // txt_valor
+            // 
+            this.txt_valor.Location = new System.Drawing.Point(678, 34);
+            this.txt_valor.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_valor.Name = "txt_valor";
+            this.txt_valor.Size = new System.Drawing.Size(232, 23);
+            this.txt_valor.TabIndex = 7;
+            // 
+            // lbl_valor
+            // 
+            this.lbl_valor.AutoSize = true;
+            this.lbl_valor.Location = new System.Drawing.Point(478, 40);
+            this.lbl_valor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_valor.Name = "lbl_valor";
+            this.lbl_valor.Size = new System.Drawing.Size(106, 17);
+            this.lbl_valor.TabIndex = 6;
+            this.lbl_valor.Text = "Valor Impuesto:";
+            // 
             // Frm_MantImpuestos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -337,5 +359,7 @@
         private System.Windows.Forms.Button Btn_guardar;
         private System.Windows.Forms.Button Btn_editar;
         private System.Windows.Forms.Button Btn_ingresar;
+        private System.Windows.Forms.TextBox txt_valor;
+        private System.Windows.Forms.Label lbl_valor;
     }
 }

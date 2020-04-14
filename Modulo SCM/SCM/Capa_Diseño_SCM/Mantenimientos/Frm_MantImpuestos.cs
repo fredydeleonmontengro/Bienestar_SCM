@@ -36,6 +36,7 @@ namespace Capa_Diseño_SCM.Mantenimientos
             txt_descripcion.Enabled = false;
             Txt_Cod.Enabled = false;
             Txt_nombre.Enabled = false;
+            txt_valor.Enabled = false;
         }
 
         /*---------------------------------------------------Codigo general------------------------------------------------------------------------------------------*/
@@ -71,7 +72,7 @@ namespace Capa_Diseño_SCM.Mantenimientos
             Txt_Cod.Enabled = false;
             Txt_nombre.Enabled = false;
             txt_descripcion.Enabled = false;
-
+            txt_valor.Enabled = false;
         }
         public void desbloqueartxt()
         {
@@ -80,9 +81,10 @@ namespace Capa_Diseño_SCM.Mantenimientos
             Btn_editar.Enabled = true;
             Btn_borrar.Enabled = true;
             /*------------------------*/
-            Txt_Cod.Enabled = true;
+            Txt_Cod.Enabled = false;
             Txt_nombre.Enabled = true;
             txt_descripcion.Enabled = true;
+            txt_valor.Enabled = true;
         }
         public void limpiar()
         {
@@ -92,6 +94,7 @@ namespace Capa_Diseño_SCM.Mantenimientos
             Txt_Cod.Text = "";
             Txt_nombre.Text = "";
             txt_descripcion.Text = "";
+            txt_valor.Text = "";
             scampo = logic.siguiente("impuestos", "pkidImpuesto");
             Txt_Cod.Text = scampo;
         }
@@ -140,15 +143,15 @@ namespace Capa_Diseño_SCM.Mantenimientos
 
         private void Btn_guardar_Click(object sender, EventArgs e)
         {
-            OdbcDataReader cita = logic.InsertarImpuesto(Txt_Cod.Text, Txt_nombre.Text, txt_descripcion.Text);
+            OdbcDataReader cita = logic.InsertarImpuesto(Txt_Cod.Text, Txt_nombre.Text, txt_descripcion.Text, txt_valor.Text);
             MessageBox.Show("Datos registrados.");
-            logic.bitacora("0", slocalIP, smacAddresses, suser, "SCM", DateTime.Now.ToString("G"), "Guardar", this.GetType().Name);
             limpiar();
+            logic.bitacora("0", slocalIP, smacAddresses, suser, "SCM", DateTime.Now.ToString("G"), "Guardar", this.GetType().Name);      
         }
 
         private void Btn_editar_Click(object sender, EventArgs e)
         {
-            OdbcDataReader cita = logic.modificarImpuesto(Txt_Cod.Text, Txt_nombre.Text, txt_descripcion.Text);
+            OdbcDataReader cita = logic.modificarImpuesto(Txt_Cod.Text, Txt_nombre.Text, txt_descripcion.Text, txt_valor.Text);
             logic.bitacora("0", slocalIP, smacAddresses, suser, "SCM", DateTime.Now.ToString("G"), "Modificar", this.GetType().Name);
             MessageBox.Show("Datos modificados correctamente.");
         }
@@ -172,6 +175,8 @@ namespace Capa_Diseño_SCM.Mantenimientos
                 Txt_nombre.Text = concep.Dgv_consulta.Rows[concep.Dgv_consulta.CurrentRow.Index].
                       Cells[1].Value.ToString();
                 txt_descripcion.Text = concep.Dgv_consulta.Rows[concep.Dgv_consulta.CurrentRow.Index].
+                      Cells[2].Value.ToString();
+                txt_valor.Text = concep.Dgv_consulta.Rows[concep.Dgv_consulta.CurrentRow.Index].
                       Cells[3].Value.ToString();
             }
         }

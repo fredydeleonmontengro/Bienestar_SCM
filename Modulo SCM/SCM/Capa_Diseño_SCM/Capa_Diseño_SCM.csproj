@@ -49,6 +49,18 @@
     <Compile Include="Consultas\Frm_consultaConceptos.designer.cs">
       <DependentUpon>Frm_consultaConceptos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consultas\Frm_consultaEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\Frm_consultaEmpleados.Designer.cs">
+      <DependentUpon>Frm_consultaEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\Frm_consultaFormaPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\Frm_consultaFormaPago.Designer.cs">
+      <DependentUpon>Frm_consultaFormaPago.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\Frm_consultaImpuesto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +110,11 @@
       <DependentUpon>Frm_Polizas.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Capa_Logica_SCM\Capa_Logica_SCM.csproj">
@@ -108,6 +125,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Consultas\Frm_consultaConceptos.resx">
       <DependentUpon>Frm_consultaConceptos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\Frm_consultaEmpleados.resx">
+      <DependentUpon>Frm_consultaEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\Frm_consultaFormaPago.resx">
+      <DependentUpon>Frm_consultaFormaPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\Frm_consultaImpuesto.resx">
       <DependentUpon>Frm_consultaImpuesto.cs</DependentUpon>
@@ -130,7 +153,13 @@
     <EmbeddedResource Include="Procesos\Frm_Ordencompra.resx">
       <DependentUpon>Frm_Ordencompra.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\icons8-espionaje-42.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

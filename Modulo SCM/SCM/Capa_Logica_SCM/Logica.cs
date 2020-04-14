@@ -55,24 +55,5 @@ namespace Capa_Logica_SCM
             return sn.eliminarconcepto(sCodigo);
 
         }
-
-        public OdbcDataReader productosmostrar(string sIdProveedor)
-        {
-            return sn.mostrarproductos(sIdProveedor);
-
-        }
-        public OdbcDataReader impuestos()
-        {
-            return sn.sumaimpustos();
-
-        }
-
-        public OdbcDataReader insertarencabezado(string pkencabezado, string codproveedor, string formapago, string fechapedido, string fecharequerida, string codempleado, string observaciones, string impuesto, string total, string descuento)
-
-        {
-            return sn.InsertarEncabezadoOrdenCompra(pkencabezado,  codproveedor,  formapago, fechapedido,  fecharequerida,  codempleado,  observaciones, impuesto, total,  descuento)
-        ;
-
-        }
     }
 }

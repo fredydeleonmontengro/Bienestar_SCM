@@ -132,55 +132,5 @@ namespace Capa_Datos_SCM
                 return null;
             }
         }
-
-        //-------------------------------------------------------------------------Foemulario de orden de compra----------------------------------------------------------
-        public OdbcDataReader mostrarproductos(string sIdProveedor)
-        {
-            try
-            {
-                cn.conexionbd();
-                string consulta = "SELECT Nombre, Costo  FROM mydb.producto  where pkidProveedor = '" + sIdProveedor + "';";
-                comm = new OdbcCommand(consulta, cn.conexionbd());
-                OdbcDataReader mostrar = comm.ExecuteReader();
-                return mostrar;
-            }
-            catch (Exception err)
-            {
-                Console.WriteLine(err.Message);
-                return null;
-            }
-        }
-        public OdbcDataReader sumaimpustos()
-        {
-            try
-            {
-                cn.conexionbd();
-                string consulta = "SELECT sum(valor) FROM mydb.impuestos;";
-                comm = new OdbcCommand(consulta, cn.conexionbd());
-                OdbcDataReader mostrar = comm.ExecuteReader();
-                return mostrar;
-            }
-            catch (Exception err)
-            {
-                Console.WriteLine(err.Message);
-                return null;
-            }
-        }
-        public OdbcDataReader InsertarEncabezadoOrdenCompra(string pkencabezado , string codproveedor, string formapago, string fechapedido, string fecharequerida, string codempleado, string observaciones, string impuesto, string total, string descuento)
-        {
-            try
-            {
-                cn.conexionbd();
-                string consulta = "insert into mydb.ordencomrpaencabezado values(" + pkencabezado + ", '" + codproveedor + "' ,'" + formapago + "','" + fechapedido + "','" + fecharequerida + "','" + codempleado + "','" + observaciones + "','" + impuesto + "','" + total + "','" + descuento + "','1');";
-                comm = new OdbcCommand(consulta, cn.conexionbd());
-                OdbcDataReader mostrar = comm.ExecuteReader();
-                return mostrar;
-            }
-            catch (Exception err)
-            {
-                Console.WriteLine(err.Message);
-                return null;
-            }
-        }
     }
 }
