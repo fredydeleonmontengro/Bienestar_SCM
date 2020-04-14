@@ -34,34 +34,53 @@ namespace Capa_Diseño_SCM.Procesos
 
         }
 
+        public Frm_Ordencompra(String scodusuario)
+        {
+            InitializeComponent();
+            numeroorden();
+
+            Txt_codigoempleado.Text = scodusuario.ToString();
+
+        }
         public void numeroorden()
 
         {
-         
-            OdbcDataReader mostrar = logic.codorden();
-            try
+            if (Txt_orden.Text=="") 
             {
-                while (mostrar.Read())
+                Txt_orden.Text = "1";
+            }
+            else
                 {
-                    Txt_orden.Text  = mostrar.GetString(0);
+                    OdbcDataReader mostrar = logic.codorden();
+                try
+                {
+                    while (mostrar.Read())
+                    {
+                        Txt_orden.Text = mostrar.GetString(0);
 
 
+                    }
+
+                }
+                catch (Exception err)
+                {
+                    Console.WriteLine(err.Message);
                 }
 
 
 
             }
-            catch (Exception err)
-            {
-                Console.WriteLine(err.Message);
-            }
+        }
 
+
+    
+            
 
         
 
 
 
-    }
+    
 
         public void Mostrarimpuestos()
         {
@@ -113,7 +132,15 @@ namespace Capa_Diseño_SCM.Procesos
 
         private void Btn_buscar_Click(object sender, EventArgs e)
         {
-            Mostrarproductos();
+           if(Txt_impuesto.Text =="")
+            {
+                MessageBox.Show("Complete Datos de foma de pago");
+            }
+            else
+            {
+                Txt_codProveedor.Enabled = false;
+                Mostrarproductos(); }
+           
           
 
         }
@@ -129,7 +156,7 @@ namespace Capa_Diseño_SCM.Procesos
 
         public void totalorden()
         {
-            if (Txt_descuento.Text == "")
+            if (textBox2.Text == "")
             {
                 Txt_descuento.Text = "0";
                 double subtotal, descuento,  total;
@@ -145,9 +172,13 @@ namespace Capa_Diseño_SCM.Procesos
             }
             else
             {
-               double subtotal, descuento, impuesto, resultimpuesto, total;
+               double subtotal, descuento, impuesto, resultimpuesto, descunto, total;
                 subtotal = Convert.ToDouble(Txt_subtotal.Text);
-                descuento = Convert.ToDouble(Txt_descuento.Text);
+                
+                double tbox2 = Convert.ToDouble(textBox2.Text);
+                descunto = tbox2 / 100;
+                descuento =subtotal* descunto;
+                Txt_descuento.Text = descuento.ToString();
                 impuesto = Convert.ToDouble(Txt_impuesto.Text);
                 resultimpuesto = subtotal * impuesto;
                 total = subtotal - descuento + resultimpuesto;
@@ -172,6 +203,8 @@ namespace Capa_Diseño_SCM.Procesos
         }
         private void Btn_agregar_Click(object sender, EventArgs e)
         {
+            textBox2.Visible = false;
+            label2.Visible = false;
             Lbl_cantidad.Visible = false;
             Txt_cantidad.Visible = false;
             Btn_agregar.Visible = false;
@@ -259,9 +292,22 @@ namespace Capa_Diseño_SCM.Procesos
 
         private void Btn_generar_Click(object sender, EventArgs e)
         {
-            Guardar();
-            Guardar2();
-            MessageBox.Show("GENERADA");
+            {
+                if (Txt_formapago.Text == "")
+                {
+                    MessageBox.Show("Complete Datos de foma de pago");
+                }
+                else
+                {
+                    Guardar();
+                    Guardar2();
+                    MessageBox.Show("GENERADA");
+                }
+
+
+
+            }
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -334,6 +380,11 @@ namespace Capa_Diseño_SCM.Procesos
         private void Dgv_detalle_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void Txt_codigoempleado_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -17,6 +17,7 @@ namespace Capa_Diseño_SCM
     {
         private int childFormNumber = 0;
         string susuario = "usuario";
+        string scodusuario = "1";
         public MDISCM()
         {
             InitializeComponent();
@@ -181,7 +182,7 @@ namespace Capa_Diseño_SCM
         }
 
         bool ventanaordenDeCompra = false;
-        Frm_Ordencompra orden = new Frm_Ordencompra();
+        Frm_Ordencompra orden = new Frm_Ordencompra("");
         private void generarOrdeDeCompraToolStripMenuItem_Click(object sender, EventArgs e)
         {
             {
@@ -190,7 +191,7 @@ namespace Capa_Diseño_SCM
                 {
                     if (frmC == null)
                     {
-                        orden = new Frm_Ordencompra();
+                        orden = new Frm_Ordencompra(scodusuario);
                     }
 
                     orden.MdiParent = this;

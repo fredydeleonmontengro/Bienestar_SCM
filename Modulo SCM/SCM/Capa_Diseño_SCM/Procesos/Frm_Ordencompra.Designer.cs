@@ -35,7 +35,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_cerrar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_buscarI = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.Txt_codigoempleado = new System.Windows.Forms.TextBox();
@@ -61,24 +60,26 @@
             this.Lbl_tipopago = new System.Windows.Forms.Label();
             this.Gpb_Detallenominal = new System.Windows.Forms.GroupBox();
             this.Dgv_detalle = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Btn_buscar = new System.Windows.Forms.Button();
             this.Btn_generar = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.Dgv_productos = new System.Windows.Forms.DataGridView();
+            this.Cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Btn_agregar = new System.Windows.Forms.Button();
             this.Txt_cantidad = new System.Windows.Forms.TextBox();
             this.Lbl_cantidad = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.Cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.Pnl_nombreForm.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -153,7 +154,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btn_buscarI);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.Txt_codigoempleado);
@@ -169,18 +169,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATOS DE ORDEN";
             this.groupBox1.UseWaitCursor = true;
-            // 
-            // btn_buscarI
-            // 
-            this.btn_buscarI.BackgroundImage = global::Capa_Diseño_SCM.Properties.Resources.icons8_espionaje_42;
-            this.btn_buscarI.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscarI.Location = new System.Drawing.Point(273, 99);
-            this.btn_buscarI.Name = "btn_buscarI";
-            this.btn_buscarI.Size = new System.Drawing.Size(28, 26);
-            this.btn_buscarI.TabIndex = 106;
-            this.btn_buscarI.UseVisualStyleBackColor = true;
-            this.btn_buscarI.UseWaitCursor = true;
-            this.btn_buscarI.Click += new System.EventHandler(this.btn_buscarI_Click);
             // 
             // dateTimePicker1
             // 
@@ -210,6 +198,7 @@
             this.Txt_codigoempleado.Size = new System.Drawing.Size(100, 20);
             this.Txt_codigoempleado.TabIndex = 40;
             this.Txt_codigoempleado.UseWaitCursor = true;
+            this.Txt_codigoempleado.TextChanged += new System.EventHandler(this.Txt_codigoempleado_TextChanged);
             // 
             // Lbl_codigoempleado
             // 
@@ -279,6 +268,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.textBox2);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.Txt_subtotal);
@@ -293,7 +284,7 @@
             this.groupBox2.Controls.Add(this.Lbl_tipopago);
             this.groupBox2.Location = new System.Drawing.Point(447, 73);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(303, 147);
+            this.groupBox2.Size = new System.Drawing.Size(345, 147);
             this.groupBox2.TabIndex = 74;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "DETALLE DE PAGO";
@@ -303,7 +294,7 @@
             // 
             this.button2.BackgroundImage = global::Capa_Diseño_SCM.Properties.Resources.icons8_espionaje_42;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(269, 32);
+            this.button2.Location = new System.Drawing.Point(311, 32);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(28, 26);
             this.button2.TabIndex = 108;
@@ -315,7 +306,7 @@
             // 
             this.button1.BackgroundImage = global::Capa_Diseño_SCM.Properties.Resources.icons8_espionaje_42;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(269, 89);
+            this.button1.Location = new System.Drawing.Point(311, 89);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(28, 26);
             this.button1.TabIndex = 107;
@@ -326,7 +317,7 @@
             // Txt_subtotal
             // 
             this.Txt_subtotal.Enabled = false;
-            this.Txt_subtotal.Location = new System.Drawing.Point(167, 10);
+            this.Txt_subtotal.Location = new System.Drawing.Point(205, 14);
             this.Txt_subtotal.Name = "Txt_subtotal";
             this.Txt_subtotal.Size = new System.Drawing.Size(100, 20);
             this.Txt_subtotal.TabIndex = 44;
@@ -335,7 +326,7 @@
             // Txt_Totalorden
             // 
             this.Txt_Totalorden.Enabled = false;
-            this.Txt_Totalorden.Location = new System.Drawing.Point(167, 118);
+            this.Txt_Totalorden.Location = new System.Drawing.Point(205, 115);
             this.Txt_Totalorden.Name = "Txt_Totalorden";
             this.Txt_Totalorden.Size = new System.Drawing.Size(100, 20);
             this.Txt_Totalorden.TabIndex = 93;
@@ -344,17 +335,17 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 21);
+            this.label3.Location = new System.Drawing.Point(6, 17);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 13);
+            this.label3.Size = new System.Drawing.Size(67, 13);
             this.label3.TabIndex = 43;
-            this.label3.Text = "SubTotal";
+            this.label3.Text = "SUB TOTAL";
             this.label3.UseWaitCursor = true;
             // 
             // Txt_impuesto
             // 
             this.Txt_impuesto.Enabled = false;
-            this.Txt_impuesto.Location = new System.Drawing.Point(167, 92);
+            this.Txt_impuesto.Location = new System.Drawing.Point(205, 89);
             this.Txt_impuesto.Name = "Txt_impuesto";
             this.Txt_impuesto.Size = new System.Drawing.Size(100, 20);
             this.Txt_impuesto.TabIndex = 42;
@@ -363,7 +354,7 @@
             // Lbl_impuesto
             // 
             this.Lbl_impuesto.AutoSize = true;
-            this.Lbl_impuesto.Location = new System.Drawing.Point(23, 96);
+            this.Lbl_impuesto.Location = new System.Drawing.Point(10, 96);
             this.Lbl_impuesto.Name = "Lbl_impuesto";
             this.Lbl_impuesto.Size = new System.Drawing.Size(63, 13);
             this.Lbl_impuesto.TabIndex = 41;
@@ -373,7 +364,7 @@
             // Lbl_total
             // 
             this.Lbl_total.AutoSize = true;
-            this.Lbl_total.Location = new System.Drawing.Point(23, 118);
+            this.Lbl_total.Location = new System.Drawing.Point(10, 118);
             this.Lbl_total.Name = "Lbl_total";
             this.Lbl_total.Size = new System.Drawing.Size(42, 13);
             this.Lbl_total.TabIndex = 39;
@@ -382,7 +373,8 @@
             // 
             // Txt_descuento
             // 
-            this.Txt_descuento.Location = new System.Drawing.Point(167, 63);
+            this.Txt_descuento.Enabled = false;
+            this.Txt_descuento.Location = new System.Drawing.Point(205, 63);
             this.Txt_descuento.Name = "Txt_descuento";
             this.Txt_descuento.Size = new System.Drawing.Size(100, 20);
             this.Txt_descuento.TabIndex = 39;
@@ -391,7 +383,7 @@
             // Txt_formapago
             // 
             this.Txt_formapago.Enabled = false;
-            this.Txt_formapago.Location = new System.Drawing.Point(167, 36);
+            this.Txt_formapago.Location = new System.Drawing.Point(205, 38);
             this.Txt_formapago.Name = "Txt_formapago";
             this.Txt_formapago.Size = new System.Drawing.Size(100, 20);
             this.Txt_formapago.TabIndex = 4;
@@ -400,7 +392,7 @@
             // Lbl_descuento
             // 
             this.Lbl_descuento.AutoSize = true;
-            this.Lbl_descuento.Location = new System.Drawing.Point(23, 70);
+            this.Lbl_descuento.Location = new System.Drawing.Point(6, 66);
             this.Lbl_descuento.Name = "Lbl_descuento";
             this.Lbl_descuento.Size = new System.Drawing.Size(74, 13);
             this.Lbl_descuento.TabIndex = 2;
@@ -410,7 +402,7 @@
             // Lbl_tipopago
             // 
             this.Lbl_tipopago.AutoSize = true;
-            this.Lbl_tipopago.Location = new System.Drawing.Point(23, 43);
+            this.Lbl_tipopago.Location = new System.Drawing.Point(6, 43);
             this.Lbl_tipopago.Name = "Lbl_tipopago";
             this.Lbl_tipopago.Size = new System.Drawing.Size(96, 13);
             this.Lbl_tipopago.TabIndex = 0;
@@ -452,6 +444,41 @@
             this.Dgv_detalle.TabIndex = 0;
             this.Dgv_detalle.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_detalle_CellContentClick);
             // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = " COD";
+            this.Codigo.Name = "Codigo";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "PRODUCTO";
+            this.Column1.MaxInputLength = 327674;
+            this.Column1.MinimumWidth = 12;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 150;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "PRECIO UNITARIO";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "CANTIDAD";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 125;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "TOTAL";
+            this.Column4.Name = "Column4";
+            // 
             // Btn_buscar
             // 
             this.Btn_buscar.Location = new System.Drawing.Point(102, 223);
@@ -464,7 +491,7 @@
             // 
             // Btn_generar
             // 
-            this.Btn_generar.Location = new System.Drawing.Point(788, 94);
+            this.Btn_generar.Location = new System.Drawing.Point(821, 94);
             this.Btn_generar.Name = "Btn_generar";
             this.Btn_generar.Size = new System.Drawing.Size(143, 49);
             this.Btn_generar.TabIndex = 77;
@@ -506,6 +533,29 @@
             this.Dgv_productos.TabIndex = 0;
             this.Dgv_productos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_productos_CellContentClick);
             // 
+            // Cod
+            // 
+            this.Cod.HeaderText = "CODIGO";
+            this.Cod.Name = "Cod";
+            this.Cod.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "PRODUCTO";
+            this.dataGridViewTextBoxColumn1.MaxInputLength = 327674;
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 12;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "COSTO";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 125;
+            // 
             // Btn_agregar
             // 
             this.Btn_agregar.Location = new System.Drawing.Point(361, 339);
@@ -540,7 +590,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(756, 169);
+            this.label5.Location = new System.Drawing.Point(831, 156);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(98, 13);
             this.label5.TabIndex = 95;
@@ -549,7 +599,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(754, 191);
+            this.textBox1.Location = new System.Drawing.Point(798, 176);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(187, 20);
             this.textBox1.TabIndex = 94;
@@ -565,63 +615,24 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // Cod
+            // textBox2
             // 
-            this.Cod.HeaderText = "CODIGO";
-            this.Cod.Name = "Cod";
-            this.Cod.ReadOnly = true;
+            this.textBox2.Location = new System.Drawing.Point(102, 63);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(49, 20);
+            this.textBox2.TabIndex = 109;
+            this.textBox2.UseWaitCursor = true;
             // 
-            // dataGridViewTextBoxColumn1
+            // label2
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "PRODUCTO";
-            this.dataGridViewTextBoxColumn1.MaxInputLength = 327674;
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 12;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "COSTO";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 125;
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = " COD";
-            this.Codigo.Name = "Codigo";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "PRODUCTO";
-            this.Column1.MaxInputLength = 327674;
-            this.Column1.MinimumWidth = 12;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 150;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "PRECIO UNITARIO";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "CANTIDAD";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "TOTAL";
-            this.Column4.Name = "Column4";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(157, 66);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(21, 16);
+            this.label2.TabIndex = 110;
+            this.label2.Text = "%";
+            this.label2.UseWaitCursor = true;
             // 
             // Frm_Ordencompra
             // 
@@ -701,7 +712,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btn_buscarI;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
@@ -713,5 +723,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cod;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
