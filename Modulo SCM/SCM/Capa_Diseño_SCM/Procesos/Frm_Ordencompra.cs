@@ -23,6 +23,7 @@ namespace Capa_Diseño_SCM.Procesos
         string producto;
         string costo;
         string totales;
+        string totalimpuesto;
         
 
         public Frm_Ordencompra()
@@ -139,6 +140,7 @@ namespace Capa_Diseño_SCM.Procesos
                 resultimpuesto = subtotal * impuesto;
                 total = subtotal - descuento + resultimpuesto;
                 Txt_Totalorden.Text = total.ToString();
+                totalimpuesto = resultimpuesto.ToString();
 
             }
             else
@@ -150,6 +152,7 @@ namespace Capa_Diseño_SCM.Procesos
                 resultimpuesto = subtotal * impuesto;
                 total = subtotal - descuento + resultimpuesto;
                 Txt_Totalorden.Text = total.ToString();
+                totalimpuesto = resultimpuesto.ToString();
             }
         }
 
@@ -219,7 +222,7 @@ namespace Capa_Diseño_SCM.Procesos
 
             string codempleado = Convert.ToString(Txt_codigoempleado.Text);
             string obsevaciones = Convert.ToString(textBox1.Text);
-            string impuesto = Convert.ToString(Txt_impuesto.Text);
+            string impuesto = totalimpuesto.ToString();
             string total = Convert.ToString(Txt_Totalorden.Text);
             string descuento = Convert.ToString(Txt_descuento.Text);
 
