@@ -59,5 +59,21 @@ namespace Capa_Diseño_SCM.Consultas
                 Close();
             }
         }
+
+        private void btn_cerrar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void btn_minimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btn_Ayuda_Click(object sender, EventArgs e)
+        {
+            string ruta = "";
+            string indice = "";
+        }
     }
 }

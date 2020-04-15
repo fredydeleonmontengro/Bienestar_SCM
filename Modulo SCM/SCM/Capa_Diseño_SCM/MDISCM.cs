@@ -186,6 +186,7 @@ namespace Capa_Diseño_SCM
         private void generarOrdeDeCompraToolStripMenuItem_Click(object sender, EventArgs e)
         {
             {
+               
                 Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_Ordencompra);
                 if (ventanaordenDeCompra == false || frmC == null)
                 {

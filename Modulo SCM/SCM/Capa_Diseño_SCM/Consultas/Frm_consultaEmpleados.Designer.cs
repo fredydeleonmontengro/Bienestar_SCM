@@ -32,11 +32,11 @@
             this.Btn_actualizar = new System.Windows.Forms.Button();
             this.Btn_seleccionar = new System.Windows.Forms.Button();
             this.Dgv_consulta = new System.Windows.Forms.DataGridView();
-            this.Pnl_nombreForm = new System.Windows.Forms.Panel();
-            this.lbl_titulo = new System.Windows.Forms.Label();
             this.cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pnl_nombreForm = new System.Windows.Forms.Panel();
             this.btn_minimizar = new System.Windows.Forms.Button();
+            this.lbl_titulo = new System.Windows.Forms.Label();
             this.btn_cerrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_consulta)).BeginInit();
             this.Pnl_nombreForm.SuspendLayout();
@@ -98,30 +98,6 @@
             this.Dgv_consulta.Size = new System.Drawing.Size(666, 241);
             this.Dgv_consulta.TabIndex = 78;
             // 
-            // Pnl_nombreForm
-            // 
-            this.Pnl_nombreForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(40)))), ((int)(((byte)(15)))));
-            this.Pnl_nombreForm.Controls.Add(this.btn_minimizar);
-            this.Pnl_nombreForm.Controls.Add(this.lbl_titulo);
-            this.Pnl_nombreForm.Controls.Add(this.btn_cerrar);
-            this.Pnl_nombreForm.Location = new System.Drawing.Point(-1, 5);
-            this.Pnl_nombreForm.Margin = new System.Windows.Forms.Padding(2);
-            this.Pnl_nombreForm.Name = "Pnl_nombreForm";
-            this.Pnl_nombreForm.Size = new System.Drawing.Size(890, 51);
-            this.Pnl_nombreForm.TabIndex = 77;
-            // 
-            // lbl_titulo
-            // 
-            this.lbl_titulo.AutoSize = true;
-            this.lbl_titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_titulo.ForeColor = System.Drawing.Color.White;
-            this.lbl_titulo.Location = new System.Drawing.Point(20, 12);
-            this.lbl_titulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_titulo.Name = "lbl_titulo";
-            this.lbl_titulo.Size = new System.Drawing.Size(190, 20);
-            this.lbl_titulo.TabIndex = 0;
-            this.lbl_titulo.Text = "Consulta de Empleado";
-            // 
             // cod
             // 
             this.cod.HeaderText = "COD";
@@ -134,6 +110,18 @@
             this.nom.Name = "nom";
             this.nom.ReadOnly = true;
             // 
+            // Pnl_nombreForm
+            // 
+            this.Pnl_nombreForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(40)))), ((int)(((byte)(15)))));
+            this.Pnl_nombreForm.Controls.Add(this.btn_minimizar);
+            this.Pnl_nombreForm.Controls.Add(this.lbl_titulo);
+            this.Pnl_nombreForm.Controls.Add(this.btn_cerrar);
+            this.Pnl_nombreForm.Location = new System.Drawing.Point(-1, 5);
+            this.Pnl_nombreForm.Margin = new System.Windows.Forms.Padding(2);
+            this.Pnl_nombreForm.Name = "Pnl_nombreForm";
+            this.Pnl_nombreForm.Size = new System.Drawing.Size(890, 51);
+            this.Pnl_nombreForm.TabIndex = 77;
+            // 
             // btn_minimizar
             // 
             this.btn_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -145,6 +133,18 @@
             this.btn_minimizar.Size = new System.Drawing.Size(33, 31);
             this.btn_minimizar.TabIndex = 5;
             this.btn_minimizar.UseVisualStyleBackColor = true;
+            // 
+            // lbl_titulo
+            // 
+            this.lbl_titulo.AutoSize = true;
+            this.lbl_titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_titulo.ForeColor = System.Drawing.Color.White;
+            this.lbl_titulo.Location = new System.Drawing.Point(20, 12);
+            this.lbl_titulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_titulo.Name = "lbl_titulo";
+            this.lbl_titulo.Size = new System.Drawing.Size(190, 20);
+            this.lbl_titulo.TabIndex = 0;
+            this.lbl_titulo.Text = "Consulta de Empleado";
             // 
             // btn_cerrar
             // 
@@ -167,6 +167,7 @@
             this.Controls.Add(this.Btn_seleccionar);
             this.Controls.Add(this.Dgv_consulta);
             this.Controls.Add(this.Pnl_nombreForm);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_consultaEmpleados";
             this.Text = "Frm_consultaEmpleados";
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_consulta)).EndInit();

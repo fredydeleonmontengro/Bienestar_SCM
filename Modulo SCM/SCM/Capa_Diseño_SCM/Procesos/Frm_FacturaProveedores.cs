@@ -102,6 +102,11 @@ namespace Capa_Diseño_SCM
             }
         }
 
+        private void btn_Ayuda_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void Frm_FacturaProveedores_Load(object sender, EventArgs e)
         {
             Txt_Cod.Text = sCODOrden;

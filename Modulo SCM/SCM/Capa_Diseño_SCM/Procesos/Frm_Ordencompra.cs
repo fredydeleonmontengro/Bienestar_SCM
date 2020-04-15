@@ -29,15 +29,15 @@ namespace Capa_Diseño_SCM.Procesos
         public Frm_Ordencompra()
         {
             InitializeComponent();
-
-            numeroorden();
+           Txt_orden.Text  = logic.siguiente("ordencomrpaencabezado", "pkIdOrdenCompraEncabezado");
+            
 
         }
 
         public Frm_Ordencompra(String scodusuario)
         {
             InitializeComponent();
-            numeroorden();
+           Txt_orden.Text  = logic.siguiente("ordencomrpaencabezado", "pkIdOrdenCompraEncabezado");
 
             Txt_codigoempleado.Text = scodusuario.ToString();
 
@@ -234,7 +234,7 @@ namespace Capa_Diseño_SCM.Procesos
 
         private void btn_minimizar_Click(object sender, EventArgs e)
         {
-
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -385,6 +385,12 @@ namespace Capa_Diseño_SCM.Procesos
         private void Txt_codigoempleado_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void btn_Ayuda_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start ("file:///C:/Users/dell/Desktop/ivanactual/Bienestar_SCM-Ivan-Fredy/Ayudas/oredencompra.html");
+           
         }
     }
 }

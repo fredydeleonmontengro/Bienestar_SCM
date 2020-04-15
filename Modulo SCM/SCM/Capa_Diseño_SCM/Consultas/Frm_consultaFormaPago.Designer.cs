@@ -32,13 +32,14 @@
             this.Btn_actualizar = new System.Windows.Forms.Button();
             this.Btn_seleccionar = new System.Windows.Forms.Button();
             this.Dgv_consulta = new System.Windows.Forms.DataGridView();
+            this.cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.det = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pnl_nombreForm = new System.Windows.Forms.Panel();
             this.btn_minimizar = new System.Windows.Forms.Button();
             this.lbl_titulo = new System.Windows.Forms.Label();
             this.btn_cerrar = new System.Windows.Forms.Button();
-            this.cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.det = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_Ayuda = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_consulta)).BeginInit();
             this.Pnl_nombreForm.SuspendLayout();
             this.SuspendLayout();
@@ -100,9 +101,28 @@
             this.Dgv_consulta.Size = new System.Drawing.Size(666, 241);
             this.Dgv_consulta.TabIndex = 82;
             // 
+            // cod
+            // 
+            this.cod.HeaderText = "COD";
+            this.cod.Name = "cod";
+            this.cod.ReadOnly = true;
+            // 
+            // nom
+            // 
+            this.nom.HeaderText = "Nombre";
+            this.nom.Name = "nom";
+            this.nom.ReadOnly = true;
+            // 
+            // det
+            // 
+            this.det.HeaderText = "Detalle";
+            this.det.Name = "det";
+            this.det.ReadOnly = true;
+            // 
             // Pnl_nombreForm
             // 
             this.Pnl_nombreForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(40)))), ((int)(((byte)(15)))));
+            this.Pnl_nombreForm.Controls.Add(this.btn_Ayuda);
             this.Pnl_nombreForm.Controls.Add(this.btn_minimizar);
             this.Pnl_nombreForm.Controls.Add(this.lbl_titulo);
             this.Pnl_nombreForm.Controls.Add(this.btn_cerrar);
@@ -117,12 +137,13 @@
             this.btn_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_minimizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_minimizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimizar.Image")));
-            this.btn_minimizar.Location = new System.Drawing.Point(808, 8);
+            this.btn_minimizar.Location = new System.Drawing.Point(771, 8);
             this.btn_minimizar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_minimizar.Name = "btn_minimizar";
             this.btn_minimizar.Size = new System.Drawing.Size(33, 31);
             this.btn_minimizar.TabIndex = 5;
             this.btn_minimizar.UseVisualStyleBackColor = true;
+            this.btn_minimizar.Click += new System.EventHandler(this.btn_minimizar_Click);
             // 
             // lbl_titulo
             // 
@@ -147,24 +168,20 @@
             this.btn_cerrar.Size = new System.Drawing.Size(33, 31);
             this.btn_cerrar.TabIndex = 4;
             this.btn_cerrar.UseVisualStyleBackColor = true;
+            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
-            // cod
+            // btn_Ayuda
             // 
-            this.cod.HeaderText = "COD";
-            this.cod.Name = "cod";
-            this.cod.ReadOnly = true;
-            // 
-            // nom
-            // 
-            this.nom.HeaderText = "Nombre";
-            this.nom.Name = "nom";
-            this.nom.ReadOnly = true;
-            // 
-            // det
-            // 
-            this.det.HeaderText = "Detalle";
-            this.det.Name = "det";
-            this.det.ReadOnly = true;
+            this.btn_Ayuda.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Ayuda.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_Ayuda.Image = ((System.Drawing.Image)(resources.GetObject("btn_Ayuda.Image")));
+            this.btn_Ayuda.Location = new System.Drawing.Point(808, 8);
+            this.btn_Ayuda.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Ayuda.Name = "btn_Ayuda";
+            this.btn_Ayuda.Size = new System.Drawing.Size(33, 31);
+            this.btn_Ayuda.TabIndex = 7;
+            this.btn_Ayuda.UseVisualStyleBackColor = true;
+            this.btn_Ayuda.Click += new System.EventHandler(this.btn_Ayuda_Click);
             // 
             // Frm_consultaFormaPago
             // 
@@ -175,6 +192,7 @@
             this.Controls.Add(this.Btn_seleccionar);
             this.Controls.Add(this.Dgv_consulta);
             this.Controls.Add(this.Pnl_nombreForm);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_consultaFormaPago";
             this.Text = "Frm_consultaFormaPago";
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_consulta)).EndInit();
@@ -196,5 +214,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cod;
         private System.Windows.Forms.DataGridViewTextBoxColumn nom;
         private System.Windows.Forms.DataGridViewTextBoxColumn det;
+        private System.Windows.Forms.Button btn_Ayuda;
     }
 }

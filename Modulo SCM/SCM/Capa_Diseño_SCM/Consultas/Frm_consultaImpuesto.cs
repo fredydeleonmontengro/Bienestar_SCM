@@ -77,5 +77,11 @@ namespace Capa_Diseño_SCM.Consultas
         {
             this.Dispose();
         }
+
+        private void btn_Ayuda_Click(object sender, EventArgs e)
+        {
+            string ruta = "";
+            string indice = "";
+        }
     }
 }
