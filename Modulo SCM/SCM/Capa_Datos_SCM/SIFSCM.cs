@@ -329,6 +329,25 @@ namespace Capa_Datos_SCM
                 return null;
             }
         }
+        public OdbcDataReader movimientogenerarl( string pkidProducto, string concepto, string documento, string cantidad, string fecha)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "insert into movimiento_general values(" + 0 + ", '" + pkidProducto + "' ,'" + concepto + "','" + documento + "','" + cantidad + "','" + fecha + "');";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
 
     }
+
+
 }

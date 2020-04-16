@@ -28,9 +28,9 @@ namespace Capa_Diseño_SCM.Consultas
             {
                 while (mostrar.Read())
                 {
-                    string s = mostrar.GetString(0) + mostrar.GetString(1) + mostrar.GetString(2) + mostrar.GetString(5) + mostrar.GetString(9);
+                    string s = mostrar.GetString(0) + mostrar.GetString(1) + mostrar.GetString(2) + mostrar.GetString(3) + mostrar.GetString(9);
                     Console.WriteLine(s);
-                    Dgv_consulta.Rows.Add(mostrar.GetString(0), mostrar.GetString(1), mostrar.GetString(2) , mostrar.GetString(5) , mostrar.GetString(9));
+                    Dgv_consulta.Rows.Add(mostrar.GetString(0), mostrar.GetString(1), mostrar.GetString(2) , mostrar.GetString(3) , mostrar.GetString(9));
                 }
             }
             catch (Exception err)
@@ -56,6 +56,16 @@ namespace Capa_Diseño_SCM.Consultas
         {
             Dgv_consulta.Rows.Clear();
             MostrarConsulta();
+        }
+
+        private void btn_cerrar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void btn_minimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

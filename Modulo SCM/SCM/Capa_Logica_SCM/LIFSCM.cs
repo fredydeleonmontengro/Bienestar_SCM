@@ -146,6 +146,16 @@ namespace Capa_Logica_SCM
 
         }
 
+        public OdbcDataReader movi(string pkidProducto, string concepto, string documento, string cantidad, string fecha)
+
+
+        {
+            return sn.movimientogenerarl(pkidProducto, concepto,  documento,cantidad, fecha)
+
+        ;
+
+        }
+
 
     }
 }

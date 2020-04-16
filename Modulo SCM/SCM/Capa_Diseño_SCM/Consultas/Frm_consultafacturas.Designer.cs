@@ -171,6 +171,7 @@
             this.btn_minimizar.Size = new System.Drawing.Size(33, 31);
             this.btn_minimizar.TabIndex = 5;
             this.btn_minimizar.UseVisualStyleBackColor = true;
+            this.btn_minimizar.Click += new System.EventHandler(this.btn_minimizar_Click);
             // 
             // lbl_titulo
             // 
@@ -195,6 +196,7 @@
             this.btn_cerrar.Size = new System.Drawing.Size(33, 31);
             this.btn_cerrar.TabIndex = 4;
             this.btn_cerrar.UseVisualStyleBackColor = true;
+            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
             // Frm_consulta_facturas
             // 

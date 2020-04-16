@@ -207,5 +207,33 @@ namespace Capa_Diseño_SCM
 
             }
         }
+
+        bool devoluciones = false;
+        Frm_DevolucionProveedores dev = new Frm_DevolucionProveedores();
+        private void devolucionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            {
+
+                Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_DevolucionProveedores);
+                if (devoluciones == false || frmC == null)
+                {
+                    if (frmC == null)
+                    {
+                        dev = new Frm_DevolucionProveedores();
+                    }
+
+                    dev.MdiParent = this;
+                    dev.Show();
+                    Application.DoEvents();
+                    devoluciones = true;
+                }
+                else
+                {
+                    dev.WindowState = System.Windows.Forms.FormWindowState.Normal;
+                }
+
+            }
+
+        }
     }
 }

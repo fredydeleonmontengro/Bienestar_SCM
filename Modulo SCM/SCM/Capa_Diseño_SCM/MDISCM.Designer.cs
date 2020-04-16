@@ -52,6 +52,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.devolucionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -113,7 +114,8 @@
             // 
             this.procesoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ingresoFacturaProveedoresToolStripMenuItem,
-            this.generarOrdeDeCompraToolStripMenuItem});
+            this.generarOrdeDeCompraToolStripMenuItem,
+            this.devolucionesToolStripMenuItem});
             this.procesoToolStripMenuItem.Name = "procesoToolStripMenuItem";
             this.procesoToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.procesoToolStripMenuItem.Text = "Proceso";
@@ -240,6 +242,13 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
             this.toolStripStatusLabel.Text = "Estado";
             // 
+            // devolucionesToolStripMenuItem
+            // 
+            this.devolucionesToolStripMenuItem.Name = "devolucionesToolStripMenuItem";
+            this.devolucionesToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.devolucionesToolStripMenuItem.Text = "Devoluciones";
+            this.devolucionesToolStripMenuItem.Click += new System.EventHandler(this.devolucionesToolStripMenuItem_Click);
+            // 
             // MDISCM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -289,6 +298,7 @@
         private System.Windows.Forms.ToolStripMenuItem impuestosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem generarOrdeDeCompraToolStripMenuItem;
         public System.Windows.Forms.ToolStrip toolStrip;
+        private System.Windows.Forms.ToolStripMenuItem devolucionesToolStripMenuItem;
     }
 }
 

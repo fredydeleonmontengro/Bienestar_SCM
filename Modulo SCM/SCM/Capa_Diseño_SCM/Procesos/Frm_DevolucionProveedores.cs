@@ -45,8 +45,30 @@ namespace Capa_Diseño_SCM.Procesos
         public void guardar()
         {
             OdbcDataReader mostrar = logic.dev(textBox2.Text, textBox1.Text , txt_Nombreproveedor.Text , Txt_Cod.Text , txt_nit.Text, txt_total.Text, textBox3.Text );
-            //(pkcodigodev, pkidEncabezadoFacturaP, pkcodigoempleado, fkIdOrdenCompra, numerofactura, total)
+            //spkidmovimiento_general,pkidProducto, concepto,  documento,cantidad, fecha
 
+
+        }
+
+        public void guardar2()
+        {
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+               
+                string producto = Convert.ToString(row.Cells["Column1"].Value);
+                string cantidad = Convert.ToString(row.Cells["Column2"].Value);
+                string fechas = fecha.Value.ToString("yyyy-MM-dd");
+                string concepto = "devolucion/compra";
+
+
+                OdbcDataReader cita = logic.movi( producto,concepto, txt_nit.Text,"-"+cantidad, fechas );
+
+
+
+            }
+
+            
+            //,pkidProducto, concepto,  documento,cantidad, fecha
 
 
         }
@@ -90,6 +112,18 @@ namespace Capa_Diseño_SCM.Procesos
         private void button2_Click(object sender, EventArgs e)
         {
             guardar();
+            guardar2();
+            MessageBox.Show("generada");
+        }
+
+        private void btn_cerrar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void btn_minimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
