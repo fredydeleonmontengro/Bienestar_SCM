@@ -59,6 +59,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.fecha = new System.Windows.Forms.DateTimePicker();
+            this.REPORTES = new System.Windows.Forms.Label();
+            this.Txt_Reporte = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.Pnl_nombreForm.SuspendLayout();
             this.gb_encabezado.SuspendLayout();
             this.gp_detalle.SuspendLayout();
@@ -373,7 +377,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(773, 489);
+            this.button2.Location = new System.Drawing.Point(745, 426);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(119, 38);
             this.button2.TabIndex = 111;
@@ -400,11 +404,51 @@
             this.fecha.Size = new System.Drawing.Size(156, 20);
             this.fecha.TabIndex = 112;
             // 
+            // REPORTES
+            // 
+            this.REPORTES.AutoSize = true;
+            this.REPORTES.Location = new System.Drawing.Point(781, 514);
+            this.REPORTES.Name = "REPORTES";
+            this.REPORTES.Size = new System.Drawing.Size(62, 13);
+            this.REPORTES.TabIndex = 114;
+            this.REPORTES.Text = "REPORTE:";
+            this.REPORTES.Visible = false;
+            this.REPORTES.Click += new System.EventHandler(this.REPORTES_Click);
+            // 
+            // Txt_Reporte
+            // 
+            this.Txt_Reporte.Image = global::Capa_Diseño_SCM.Properties.Resources.report;
+            this.Txt_Reporte.Location = new System.Drawing.Point(849, 497);
+            this.Txt_Reporte.Name = "Txt_Reporte";
+            this.Txt_Reporte.Size = new System.Drawing.Size(53, 41);
+            this.Txt_Reporte.TabIndex = 113;
+            this.Txt_Reporte.UseVisualStyleBackColor = true;
+            this.Txt_Reporte.Visible = false;
+            this.Txt_Reporte.Click += new System.EventHandler(this.Txt_Reporte_Click);
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            this.printPreviewDialog1.Load += new System.EventHandler(this.printPreviewDialog1_Load);
+            // 
             // Frm_DevolucionProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(913, 550);
+            this.Controls.Add(this.REPORTES);
+            this.Controls.Add(this.Txt_Reporte);
             this.Controls.Add(this.fecha);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button2);
@@ -464,5 +508,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.Label REPORTES;
+        private System.Windows.Forms.Button Txt_Reporte;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }

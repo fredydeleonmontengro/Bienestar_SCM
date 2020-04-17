@@ -68,16 +68,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txt_nit = new System.Windows.Forms.TextBox();
             this.gb_impuestos = new System.Windows.Forms.GroupBox();
+            this.btn_buscarI = new System.Windows.Forms.Button();
             this.lbl_nombre = new System.Windows.Forms.Label();
             this.txt_nombreImpuesto = new System.Windows.Forms.TextBox();
             this.lbl_valor = new System.Windows.Forms.Label();
-            this.txt_valor = new System.Windows.Forms.TextBox();
             this.lbl_codImpuesto = new System.Windows.Forms.Label();
+            this.txt_valor = new System.Windows.Forms.TextBox();
             this.txt_codImpuesto = new System.Windows.Forms.TextBox();
             this.gb_encabezado = new System.Windows.Forms.GroupBox();
-            this.gp_detalle = new System.Windows.Forms.GroupBox();
             this.dtp_fecha = new System.Windows.Forms.DateTimePicker();
-            this.btn_buscarI = new System.Windows.Forms.Button();
+            this.gp_detalle = new System.Windows.Forms.GroupBox();
+            this.REPORTES = new System.Windows.Forms.Label();
+            this.Txt_Reporte = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.Pnl_nombreForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_pedido)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -526,10 +530,21 @@
             this.gb_impuestos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_impuestos.Location = new System.Drawing.Point(11, 269);
             this.gb_impuestos.Name = "gb_impuestos";
-            this.gb_impuestos.Size = new System.Drawing.Size(1086, 114);
+            this.gb_impuestos.Size = new System.Drawing.Size(1086, 97);
             this.gb_impuestos.TabIndex = 95;
             this.gb_impuestos.TabStop = false;
             this.gb_impuestos.Text = "Impuestos";
+            // 
+            // btn_buscarI
+            // 
+            this.btn_buscarI.BackgroundImage = global::Capa_Diseño_SCM.Properties.Resources.icons8_espionaje_42;
+            this.btn_buscarI.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_buscarI.Location = new System.Drawing.Point(445, 18);
+            this.btn_buscarI.Name = "btn_buscarI";
+            this.btn_buscarI.Size = new System.Drawing.Size(32, 32);
+            this.btn_buscarI.TabIndex = 105;
+            this.btn_buscarI.UseVisualStyleBackColor = true;
+            this.btn_buscarI.Click += new System.EventHandler(this.btn_buscarI_Click);
             // 
             // lbl_nombre
             // 
@@ -563,16 +578,6 @@
             this.lbl_valor.TabIndex = 102;
             this.lbl_valor.Text = "Valor Impuesto:";
             // 
-            // txt_valor
-            // 
-            this.txt_valor.Enabled = false;
-            this.txt_valor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_valor.Location = new System.Drawing.Point(841, 19);
-            this.txt_valor.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_valor.Name = "txt_valor";
-            this.txt_valor.Size = new System.Drawing.Size(156, 24);
-            this.txt_valor.TabIndex = 101;
-            // 
             // lbl_codImpuesto
             // 
             this.lbl_codImpuesto.AutoSize = true;
@@ -583,6 +588,16 @@
             this.lbl_codImpuesto.Size = new System.Drawing.Size(145, 18);
             this.lbl_codImpuesto.TabIndex = 100;
             this.lbl_codImpuesto.Text = "Codigo de Impuesto:";
+            // 
+            // txt_valor
+            // 
+            this.txt_valor.Enabled = false;
+            this.txt_valor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_valor.Location = new System.Drawing.Point(841, 19);
+            this.txt_valor.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_valor.Name = "txt_valor";
+            this.txt_valor.Size = new System.Drawing.Size(156, 24);
+            this.txt_valor.TabIndex = 101;
             // 
             // txt_codImpuesto
             // 
@@ -620,6 +635,14 @@
             this.gb_encabezado.TabStop = false;
             this.gb_encabezado.Text = "Encabezado";
             // 
+            // dtp_fecha
+            // 
+            this.dtp_fecha.Location = new System.Drawing.Point(841, 64);
+            this.dtp_fecha.Name = "dtp_fecha";
+            this.dtp_fecha.Size = new System.Drawing.Size(156, 26);
+            this.dtp_fecha.TabIndex = 99;
+            this.dtp_fecha.ValueChanged += new System.EventHandler(this.dtp_fecha_ValueChanged);
+            // 
             // gp_detalle
             // 
             this.gp_detalle.Controls.Add(this.dataGridView1);
@@ -630,37 +653,56 @@
             this.gp_detalle.Controls.Add(this.Dgv_pedido);
             this.gp_detalle.Controls.Add(this.Btn_pasarUnoI);
             this.gp_detalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gp_detalle.Location = new System.Drawing.Point(11, 401);
+            this.gp_detalle.Location = new System.Drawing.Point(11, 372);
             this.gp_detalle.Name = "gp_detalle";
-            this.gp_detalle.Size = new System.Drawing.Size(1086, 422);
+            this.gp_detalle.Size = new System.Drawing.Size(1086, 385);
             this.gp_detalle.TabIndex = 96;
             this.gp_detalle.TabStop = false;
             this.gp_detalle.Text = "Detalle";
             // 
-            // dtp_fecha
+            // REPORTES
             // 
-            this.dtp_fecha.Location = new System.Drawing.Point(841, 64);
-            this.dtp_fecha.Name = "dtp_fecha";
-            this.dtp_fecha.Size = new System.Drawing.Size(156, 26);
-            this.dtp_fecha.TabIndex = 99;
-            this.dtp_fecha.ValueChanged += new System.EventHandler(this.dtp_fecha_ValueChanged);
+            this.REPORTES.AutoSize = true;
+            this.REPORTES.Location = new System.Drawing.Point(1035, 769);
+            this.REPORTES.Name = "REPORTES";
+            this.REPORTES.Size = new System.Drawing.Size(62, 13);
+            this.REPORTES.TabIndex = 116;
+            this.REPORTES.Text = "REPORTE:";
+            this.REPORTES.Visible = false;
             // 
-            // btn_buscarI
+            // Txt_Reporte
             // 
-            this.btn_buscarI.BackgroundImage = global::Capa_Diseño_SCM.Properties.Resources.icons8_espionaje_42;
-            this.btn_buscarI.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscarI.Location = new System.Drawing.Point(445, 18);
-            this.btn_buscarI.Name = "btn_buscarI";
-            this.btn_buscarI.Size = new System.Drawing.Size(32, 32);
-            this.btn_buscarI.TabIndex = 105;
-            this.btn_buscarI.UseVisualStyleBackColor = true;
-            this.btn_buscarI.Click += new System.EventHandler(this.btn_buscarI_Click);
+            this.Txt_Reporte.Image = global::Capa_Diseño_SCM.Properties.Resources.report;
+            this.Txt_Reporte.Location = new System.Drawing.Point(1103, 743);
+            this.Txt_Reporte.Name = "Txt_Reporte";
+            this.Txt_Reporte.Size = new System.Drawing.Size(53, 41);
+            this.Txt_Reporte.TabIndex = 115;
+            this.Txt_Reporte.UseVisualStyleBackColor = true;
+            this.Txt_Reporte.Visible = false;
+            this.Txt_Reporte.Click += new System.EventHandler(this.Txt_Reporte_Click);
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
             // Frm_FacturaProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1109, 882);
+            this.ClientSize = new System.Drawing.Size(1156, 788);
+            this.Controls.Add(this.REPORTES);
+            this.Controls.Add(this.Txt_Reporte);
             this.Controls.Add(this.gp_detalle);
             this.Controls.Add(this.gb_encabezado);
             this.Controls.Add(this.gb_impuestos);
@@ -682,6 +724,7 @@
             this.gp_detalle.ResumeLayout(false);
             this.gp_detalle.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -736,5 +779,9 @@
         private System.Windows.Forms.TextBox txt_nombreImpuesto;
         private System.Windows.Forms.DateTimePicker dtp_fecha;
         private System.Windows.Forms.Button btn_buscarI;
+        private System.Windows.Forms.Label REPORTES;
+        private System.Windows.Forms.Button Txt_Reporte;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }

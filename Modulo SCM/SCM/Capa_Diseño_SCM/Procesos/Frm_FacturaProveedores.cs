@@ -88,6 +88,8 @@ namespace Capa_Diseño_SCM
 
         private void btn_buscarI_Click(object sender, EventArgs e)
         {
+            Txt_Reporte.Visible = true;
+            REPORTES.Visible = true;
             Frm_consultaImpuesto concep = new Frm_consultaImpuesto();
             concep.ShowDialog();
 
@@ -104,6 +106,40 @@ namespace Capa_Diseño_SCM
 
         private void btn_Ayuda_Click(object sender, EventArgs e)
         {
+
+        }
+
+        Bitmap bmp;
+        private void Txt_Reporte_Click(object sender, EventArgs e)
+        {
+
+            int height = dataGridView1.Height;
+            dataGridView1.Height = dataGridView1.RowCount * dataGridView1.RowTemplate.Height * 2;
+            bmp = new Bitmap(dataGridView1.Width, dataGridView1.Height);
+            dataGridView1.DrawToBitmap(bmp, new Rectangle(0, 0, dataGridView1.Width, dataGridView1.Height));
+            dataGridView1.Height = height;
+            printPreviewDialog1.ShowDialog();
+
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            string fechapedido = dtp_fecha.Value.ToString("yyyy-MM-dd");
+            e.Graphics.DrawString("FACTURA PROVEEDORES", new Font("Times New Roman", 35, FontStyle.Bold), Brushes.Black, new PointF(200, 10));
+            e.Graphics.DrawString("FECHA DE ENTREGA: " + fechapedido, new Font("Times New Roman", 14, FontStyle.Bold), Brushes.Black, new PointF(100, 190));
+
+            e.Graphics.DrawString("CODIGO USUARIO:" + txt_CODUsuario.Text, new Font("Times New Roman", 14, FontStyle.Bold), Brushes.Black, new PointF(100, 450));
+            e.Graphics.DrawString("CODIGO PROVEEDOR:" + txt_CODproveedor.Text, new Font("Times New Roman", 14, FontStyle.Bold), Brushes.Black, new PointF(100, 480));
+            e.Graphics.DrawString("CODIGO ORDEN DE COMPRA:" + Txt_Cod.Text, new Font("Times New Roman", 14, FontStyle.Bold), Brushes.Black, new PointF(100, 510));
+            e.Graphics.DrawString("TOTAL IMPUESTO:" + txt_totalImpuesto.Text, new Font("Times New Roman", 14, FontStyle.Bold), Brushes.Black, new PointF(100, 540));
+
+
+
+            e.Graphics.DrawString("DETALLE ENTREGADO", new Font("Times New Roman", 20, FontStyle.Bold), Brushes.Black, new PointF(100, 600));
+            e.Graphics.DrawImage(bmp, 100, 650);
+
+
+            e.Graphics.DrawString("TOTAL:" + txt_total.Text, new Font("Times New Roman", 16, FontStyle.Bold), Brushes.Black, new PointF(100, 1000));
 
         }
 

@@ -30,10 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Ordencompra));
             this.Pnl_nombreForm = new System.Windows.Forms.Panel();
-            this.btn_Ayuda = new System.Windows.Forms.Button();
-            this.btn_minimizar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_cerrar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,8 +45,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.Txt_subtotal = new System.Windows.Forms.TextBox();
             this.Txt_Totalorden = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -80,6 +75,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.Txt_Reporte = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Ayuda = new System.Windows.Forms.Button();
+            this.btn_minimizar = new System.Windows.Forms.Button();
+            this.btn_cerrar = new System.Windows.Forms.Button();
+            this.REPORTES = new System.Windows.Forms.Label();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.Pnl_nombreForm.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -102,32 +106,6 @@
             this.Pnl_nombreForm.Size = new System.Drawing.Size(1030, 62);
             this.Pnl_nombreForm.TabIndex = 72;
             // 
-            // btn_Ayuda
-            // 
-            this.btn_Ayuda.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_Ayuda.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_Ayuda.Image = ((System.Drawing.Image)(resources.GetObject("btn_Ayuda.Image")));
-            this.btn_Ayuda.Location = new System.Drawing.Point(952, 8);
-            this.btn_Ayuda.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Ayuda.Name = "btn_Ayuda";
-            this.btn_Ayuda.Size = new System.Drawing.Size(33, 31);
-            this.btn_Ayuda.TabIndex = 6;
-            this.btn_Ayuda.UseVisualStyleBackColor = true;
-            this.btn_Ayuda.Click += new System.EventHandler(this.btn_Ayuda_Click);
-            // 
-            // btn_minimizar
-            // 
-            this.btn_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_minimizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_minimizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimizar.Image")));
-            this.btn_minimizar.Location = new System.Drawing.Point(915, 8);
-            this.btn_minimizar.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_minimizar.Name = "btn_minimizar";
-            this.btn_minimizar.Size = new System.Drawing.Size(33, 31);
-            this.btn_minimizar.TabIndex = 5;
-            this.btn_minimizar.UseVisualStyleBackColor = true;
-            this.btn_minimizar.Click += new System.EventHandler(this.btn_minimizar_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -139,19 +117,6 @@
             this.label1.Size = new System.Drawing.Size(182, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "ORDEN DE COMPRA";
-            // 
-            // btn_cerrar
-            // 
-            this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_cerrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrar.Image")));
-            this.btn_cerrar.Location = new System.Drawing.Point(989, 8);
-            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_cerrar.Name = "btn_cerrar";
-            this.btn_cerrar.Size = new System.Drawing.Size(33, 31);
-            this.btn_cerrar.TabIndex = 4;
-            this.btn_cerrar.UseVisualStyleBackColor = true;
-            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
             // groupBox1
             // 
@@ -309,30 +274,6 @@
             this.textBox2.Size = new System.Drawing.Size(49, 20);
             this.textBox2.TabIndex = 109;
             this.textBox2.UseWaitCursor = true;
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::Capa_Diseño_SCM.Properties.Resources.icons8_espionaje_42;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(311, 32);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(28, 26);
-            this.button2.TabIndex = 108;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.UseWaitCursor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::Capa_Diseño_SCM.Properties.Resources.icons8_espionaje_42;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(311, 89);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(28, 26);
-            this.button1.TabIndex = 107;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.UseWaitCursor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Txt_subtotal
             // 
@@ -635,11 +576,113 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // Txt_Reporte
+            // 
+            this.Txt_Reporte.Image = global::Capa_Diseño_SCM.Properties.Resources.report;
+            this.Txt_Reporte.Location = new System.Drawing.Point(973, 479);
+            this.Txt_Reporte.Name = "Txt_Reporte";
+            this.Txt_Reporte.Size = new System.Drawing.Size(53, 41);
+            this.Txt_Reporte.TabIndex = 97;
+            this.Txt_Reporte.UseVisualStyleBackColor = true;
+            this.Txt_Reporte.Visible = false;
+            this.Txt_Reporte.Click += new System.EventHandler(this.Txt_Reporte_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::Capa_Diseño_SCM.Properties.Resources.icons8_espionaje_42;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(311, 32);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(28, 26);
+            this.button2.TabIndex = 108;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseWaitCursor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::Capa_Diseño_SCM.Properties.Resources.icons8_espionaje_42;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(311, 89);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(28, 26);
+            this.button1.TabIndex = 107;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseWaitCursor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btn_Ayuda
+            // 
+            this.btn_Ayuda.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Ayuda.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_Ayuda.Image = ((System.Drawing.Image)(resources.GetObject("btn_Ayuda.Image")));
+            this.btn_Ayuda.Location = new System.Drawing.Point(952, 8);
+            this.btn_Ayuda.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Ayuda.Name = "btn_Ayuda";
+            this.btn_Ayuda.Size = new System.Drawing.Size(33, 31);
+            this.btn_Ayuda.TabIndex = 6;
+            this.btn_Ayuda.UseVisualStyleBackColor = true;
+            this.btn_Ayuda.Click += new System.EventHandler(this.btn_Ayuda_Click);
+            // 
+            // btn_minimizar
+            // 
+            this.btn_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_minimizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_minimizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimizar.Image")));
+            this.btn_minimizar.Location = new System.Drawing.Point(915, 8);
+            this.btn_minimizar.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_minimizar.Name = "btn_minimizar";
+            this.btn_minimizar.Size = new System.Drawing.Size(33, 31);
+            this.btn_minimizar.TabIndex = 5;
+            this.btn_minimizar.UseVisualStyleBackColor = true;
+            this.btn_minimizar.Click += new System.EventHandler(this.btn_minimizar_Click);
+            // 
+            // btn_cerrar
+            // 
+            this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_cerrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrar.Image")));
+            this.btn_cerrar.Location = new System.Drawing.Point(989, 8);
+            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_cerrar.Name = "btn_cerrar";
+            this.btn_cerrar.Size = new System.Drawing.Size(33, 31);
+            this.btn_cerrar.TabIndex = 4;
+            this.btn_cerrar.UseVisualStyleBackColor = true;
+            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
+            // 
+            // REPORTES
+            // 
+            this.REPORTES.AutoSize = true;
+            this.REPORTES.Location = new System.Drawing.Point(905, 493);
+            this.REPORTES.Name = "REPORTES";
+            this.REPORTES.Size = new System.Drawing.Size(62, 13);
+            this.REPORTES.TabIndex = 98;
+            this.REPORTES.Text = "REPORTE:";
+            this.REPORTES.Visible = false;
+            this.REPORTES.Click += new System.EventHandler(this.REPORTES_Click);
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
             // Frm_Ordencompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1039, 530);
+            this.Controls.Add(this.REPORTES);
+            this.Controls.Add(this.Txt_Reporte);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label5);
@@ -658,6 +701,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_Ordencompra";
             this.Text = "Frm_Ordencompra";
+            this.Load += new System.EventHandler(this.Frm_Ordencompra_Load);
             this.Pnl_nombreForm.ResumeLayout(false);
             this.Pnl_nombreForm.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -726,5 +770,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button Txt_Reporte;
+        private System.Windows.Forms.Label REPORTES;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }
